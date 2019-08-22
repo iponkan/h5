@@ -1,26 +1,30 @@
 <template>
-    <scroll style="background-color: #D81B60;">
-        <!-- Make a div wrapped slider,set height and width -->
-        <div style="width:100%;height:100%">
-            <!-- Using the slider component -->
-            <slider ref="slider" :options="options" @slide='slide' @tap='onTap' @init='onInit'>
-                <!-- slideritem wrapped package with the components you need -->
-                <slideritem v-for="(item,index) in someList" :key="index" :style="item.style">{{item.html}}</slideritem>
-                <!-- Customizable loading -->
-                <div slot="loading">loading...</div>
-            </slider>
-        </div>
-    </scroll>
-
+    <div id="app">
+        <!--        <img alt="Vue logo" src="./assets/logo.png">-->
+        <!--        <HelloWorld msg="Welcome to Your Vue.js App"/>-->
+        <Scroll style="background-color: #D81B60">
+            <div style="width:100%;height:100%">
+                <!-- Using the slider component -->
+                <slider ref="slider" :options="options" @slide='slide' @tap='onTap' @init='onInit'>
+                    <!-- slideritem wrapped package with the components you need -->
+                    <slideritem v-for="(item,index) in someList" :key="index" :style="item.style">{{item.html}}
+                    </slideritem>
+                    <!-- Customizable loading -->
+                    <div slot="loading">loading...</div>
+                </slider>
+            </div>
+        </Scroll>
+    </div>
 </template>
+
 <script>
+    // import HelloWorld from './components/HelloWorld.vue'
+    import Scroll from './components/Scroll.vue'
     // import slider components
     import {slider, slideritem} from 'vue-concise-slider'
 
-    import {scroll} from '@/components/Scroll'
-
     export default {
-        el: '#app',
+        name: 'app',
         data() {
             return {
                 //data list [array]
@@ -52,9 +56,20 @@
             }
         },
         components: {
-            scroll,
+            // HelloWorld,
+            Scroll,
             slider,
             slideritem
         }
     }
 </script>
+
+<style>
+    html, body, #app {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+</style>

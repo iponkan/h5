@@ -1,19 +1,12 @@
-<style scoped="scoped">
-    .w-scroll {
-        height: 100%;
-        overflow: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-</style>
 <template>
-    <div ref="scroll" class="w-scroll">
+    <div ref="Scroll" class="w-scroll">
         <slot></slot>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'scroll',
+        name: 'Scroll',
         data() {
             return {}
         },
@@ -54,3 +47,11 @@
         },
     }
 </script>
+
+<style scoped="scoped">
+    .w-scroll {
+        height: 100%;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+</style>
