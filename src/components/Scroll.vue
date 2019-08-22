@@ -1,5 +1,5 @@
 <template>
-    <div ref="Scroll" class="w-scroll">
+    <div ref="Scroll">
         <slot></slot>
     </div>
 </template>
@@ -47,11 +47,3 @@
         },
     }
 </script>
-
-<style scoped="scoped">
-    .w-scroll {
-        height: 100%;
-        overflow: hidden;
-        -webkit-overflow-scrolling: touch;
-    }
-</style>

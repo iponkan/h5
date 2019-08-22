@@ -2,7 +2,7 @@
     <div id="app">
         <!--        <img alt="Vue logo" src="./assets/logo.png">-->
         <!--        <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-        <Scroll>
+        <Scroll style="background-color: #D81B60 ;width:100%;;height:100%">
             <CSlider style="width:100%;height:100%"/>
         </Scroll>
 
