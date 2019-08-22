@@ -51,7 +51,7 @@
 <style scoped="scoped">
     .w-scroll {
         height: 100%;
-        overflow: auto;
+        overflow: hidden;
         -webkit-overflow-scrolling: touch;
     }
 </style>
