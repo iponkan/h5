@@ -1,5 +1,5 @@
 <template>
-    <scroll style="background-color: #f2f2f2;">
+    <scroll style="background-color: #D81B60;">
         <!-- Make a div wrapped slider,set height and width -->
         <div style="width:100%;height:100%">
             <!-- Using the slider component -->
