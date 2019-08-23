@@ -1,3 +1,5 @@
+const IP = require('./get-ip')
+
 module.exports = {
     // 基本路径
     publicPath: './',
@@ -5,9 +7,9 @@ module.exports = {
     outputDir: 'dist',
     // 生产环境是否生成 sourceMap 文件
     productionSourceMap: false,
-    // 服务器端口号
+    // 服务器
     devServer: {
-        host: '0.0.0.0',//若手机调试改成本地ip
+        host: IP,//本机局域网ip
         port: 6060
     },
 }
