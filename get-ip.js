@@ -1,12 +1,14 @@
-var os = require('os'), ip = '', ifaces = os.networkInterfaces() // 获取本机ip
+const os = require('os');
+let ip = '0.0.0.0';
+const networkInterfaces = os.networkInterfaces();
 out:
-    for (var i in ifaces) {
-        for (var j in ifaces[i]) {
-            var val = ifaces[i][j]
+    for (const i in networkInterfaces) {
+        for (const j in networkInterfaces[i]) {
+            const val = networkInterfaces[i][j];
             if (val.family === 'IPv4' && val.address !== '127.0.0.1') {
-                ip = val.address
+                ip = val.address;
                 break out
             }
         }
     }
-module.exports = ip
+module.exports = ip;
