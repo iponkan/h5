@@ -1,5 +1,3 @@
-const IP = require('./get-ip')
-
 module.exports = {
     // 基本路径
     publicPath: './',
@@ -9,7 +7,7 @@ module.exports = {
     productionSourceMap: false,
     // 服务器
     devServer: {
-        host: IP,//本机局域网ip
+        host: '0.0.0.0',
         port: 6060
     },
 }
