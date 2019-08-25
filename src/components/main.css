@@ -1,0 +1,12 @@
+.arrow {
+    position: absolute;
+    top: 90%;
+    left: 45%;
+    width: 10%;
+    z-index: 2;
+}
+
+.fadeOutUp {
+    -webkit-animation: 2s fadeOutUp ease-in-out infinite;
+    animation: 2s fadeOutUp ease-in-out infinite;
+}
