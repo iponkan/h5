@@ -2,9 +2,9 @@
     <div id="app">
         <!--        <img alt="Vue logo" src="./assets/logo.png">-->
         <!--        <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-        <!--        <Scroll style="background-color: #D81B60 ;width:100%;;height:100%">-->
-        <!--            <CSlider style="width:100%;height:100%"/>-->
-        <!--        </Scroll>-->
+        <Scroll style="background-color: #D81B60 ;width:100%;;height:100%">
+            <CSlider style="width:100%;height:100%"/>
+        </Scroll>
         <div class="arrow fadeOutUp">
             <img src="./assets/arrwo.png" width="100%"/>
         </div>
@@ -25,7 +25,7 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style>
     html, body, #app {
         padding: 0;
         margin: 0;
@@ -33,6 +33,9 @@
         overflow: hidden;
         -webkit-overflow-scrolling: touch;
     }
+</style>
+
+<style lang="scss" scoped>
 
     .arrow {
         position: absolute;
