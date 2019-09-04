@@ -4,7 +4,11 @@
         <!-- Using the slider component -->
         <slider :options="options" @slide='slide' @tap='onTap' @init='onInit'>
             <!-- slideritem wrapped package with the components you need -->
-            <slideritem v-for="(item,index) in someList" :key="index" :style="item.style">{{item.html}}</slideritem>
+            <slideritem v-for="(item,index) in someList" :key="index" :style="item.style">{{item.html}}
+                <div class="arrow fadeOutUp">
+                    <img src="../assets/arrwo.png" width="100%"/>
+                </div>
+            </slideritem>
             <!-- Customizable loading -->
             <div slot="loading">loading...</div>
         </slider>
@@ -53,6 +57,47 @@
     }
 </script>
 
-<style scoped>
 
+<style lang="scss" scoped>
+
+    .arrow {
+        position: absolute;
+        top: 90%;
+        left: 45%;
+        width: 10%;
+        z-index: 2;
+    }
+
+    .fadeOutUp {
+        -webkit-animation: 2s fadeOutUp ease-in-out infinite;
+        animation: 2s fadeOutUp ease-in-out infinite;
+    }
+
+    @-webkit-keyframes fadeOutUp {
+        0% {
+            opacity: 1;
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+        }
+        50% {
+            opacity: 0.3;
+            -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+        }
+    }
+
+    @keyframes fadeOutUp {
+        0% {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+            transform: translateY(0);
+        }
+        50% {
+            opacity: 0.3;
+            -webkit-transform: translateY(-20px);
+            -ms-transform: translateY(-20px);
+            transform: translateY(-20px);
+        }
+    }
 </style>
