@@ -4,10 +4,17 @@
         <!-- Using the slider component -->
         <slider :options="options" @slide='slide' @tap='onTap' @init='onInit'>
             <!-- slideritem wrapped package with the components you need -->
-            <slideritem v-for="(item,index) in someList" :key="index" :style="item.style">{{item.html}}
-                <div class="arrow fadeOutUp">
-                    <img src="../assets/arrwo.png" width="100%"/>
+            <slideritem v-for="(item,index) in someList" :key="index" :style="item.style">
+                <div v-if="index < someList.length-1" class="arrow fadeOutUp">
+                    <img src="../assets/arrow.png" width="100%"/>
                 </div>
+                <div v-if="index === 0">
+                    <video class="videoClass" width="100%" height="100%" id="thevideo4" preload="auto"
+                           src="https://appvideo.www.gov.cn/html5/2018/x264_hb.mp4" poster="../assets/yulan.jpg"
+                           controls="">
+                    </video>
+                </div>
+
             </slideritem>
             <!-- Customizable loading -->
             <div slot="loading">loading...</div>
@@ -25,19 +32,16 @@
                 //data list [array]
                 someList: [
                     {
-                        html: 'slide1',
                         style: {
-                            'background': '#1bbc9b'
+                            'background': '#000000'
                         }
                     },
                     {
-                        html: 'slide2',
                         style: {
                             'background': '#4bbfc3'
                         }
                     },
                     {
-                        html: 'slide3',
                         style: {
                             'background': '#7baabe'
                         }
