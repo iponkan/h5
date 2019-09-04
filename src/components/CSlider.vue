@@ -4,7 +4,7 @@
         <!-- Using the slider component -->
         <slider :options="options" @slide='slide' @tap='onTap' @init='onInit'>
             <!-- slideritem wrapped package with the components you need -->
-            <slideritem v-for="(item,index) in someList" :key="index" :style="item.style">
+            <!-- <slideritem v-for="(item,index) in someList" :key="index" :style="item.style">
                 <div v-if="index < someList.length-1" class="arrow fadeOutUp">
                     <img src="../assets/arrow.png" width="100%"/>
                 </div>
@@ -15,7 +15,34 @@
                     </video>
                 </div>
 
+            </slideritem> -->
+            <slideritem>
+                <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+                <!-- <div style="'background': '#000000'"></div> -->
+                <div>
+                    <video class="videoClass" width="100%" height="100%" id="thevideo4" preload="auto"
+                           src="https://appvideo.www.gov.cn/html5/2018/x264_hb.mp4" poster="../assets/yulan.jpg"
+                           controls="">
+                    </video>
+                
+                    
+                </div>
             </slideritem>
+
+            <slideritem>
+            
+                <div width="500" height="500">
+                    <img src="../assets/i1.jpeg" alt="Smiley face" width="100%" height="100%">
+                </div>
+            </slideritem>
+
+            <slideritem>
+                <Page1></Page1>
+            </slideritem>
+            <slideritem>
+                <Page2></Page2>
+            </slideritem>
+
             <!-- Customizable loading -->
             <div slot="loading">loading...</div>
         </slider>
@@ -23,7 +50,10 @@
 </template>
 <script>
     // import slider components
-    import {slider, slideritem} from 'vue-concise-slider'
+    import {slider, slideritem} from 'vue-concise-slider';
+    import Page1 from './Page1.vue';
+     import Page2 from './Page2.vue'
+    // import Page3 from './Page3.vue'
 
     export default {
         name: 'CSlider',
@@ -32,6 +62,9 @@
                 //data list [array]
                 someList: [
                     {
+                        page:{
+
+                        },
                         style: {
                             'background': '#000000'
                         }
@@ -56,7 +89,9 @@
         },
         components: {
             slider,
-            slideritem
+            slideritem,
+            Page1,
+            Page2
         }
     }
 </script>
