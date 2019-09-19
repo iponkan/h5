@@ -1,5 +1,5 @@
 <template>
-    <div class="page" style="background:#23aa67">
+    <div class="body">
         <my-video :sources="video.sources" :options="video.options" style="width: 100%">
 
         </my-video>
@@ -32,3 +32,10 @@
         }
     }
 </script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+    .body {
+        background: #23aa67;
+    }
+</style>

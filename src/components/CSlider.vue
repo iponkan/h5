@@ -74,51 +74,14 @@
 </script>
 
 
-<style lang="scss" scoped>
+<style>
+
+    /*引入公共样式*/
+    @import '../style/main.scss';
 
     .page {
         width: 100%;
         height: 100%;
     }
 
-    .arrow {
-        position: absolute;
-        top: 90%;
-        left: 45%;
-        width: 10%;
-        z-index: 2;
-    }
-
-    .fadeOutUp {
-        -webkit-animation: 2s fadeOutUp ease-in-out infinite;
-        animation: 2s fadeOutUp ease-in-out infinite;
-    }
-
-    @-webkit-keyframes fadeOutUp {
-        0% {
-            opacity: 1;
-            -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-        }
-        50% {
-            opacity: 0.3;
-            -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-        }
-    }
-
-    @keyframes fadeOutUp {
-        0% {
-            opacity: 1;
-            -webkit-transform: translateY(0);
-            -ms-transform: translateY(0);
-            transform: translateY(0);
-        }
-        50% {
-            opacity: 0.3;
-            -webkit-transform: translateY(-20px);
-            -ms-transform: translateY(-20px);
-            transform: translateY(-20px);
-        }
-    }
 </style>
