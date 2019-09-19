@@ -1,41 +1,34 @@
 <template>
-    <div class="body">
-        <my-video :sources="video.sources" :options="video.options" style="width: 100%">
-
-        </my-video>
+    <div>
+        <video-player :options="videoOptions"
+                      poster="https://v-img.zjol.com.cn/279757.jpg"/>
     </div>
 </template>
 
 <script>
-
-    import myVideo from 'vue-video'
+    import VideoPlayer from "./VideoPlayer/VideoPlayer.vue";
 
     export default {
-        name: 'page1',
+        name: "page1",
+        components: {
+            VideoPlayer
+        },
         data() {
             return {
-                video: {
-                    sources: [{
-                        src: 'http://vjs.zencdn.net/v/oceans.mp4',
-                        type: 'video/mp4'
-                    }],
-                    options: {
-                        autoplay: false,
-                        volume: 0.6,
-                        poster: 'https://surmon-china.github.io/vue-quill-editor/static/images/surmon-1.jpg'
-                    }
+                videoOptions: {
+                    autoplay: false,
+                    controls: true,
+                    preload: "auto",
+                    width: "960px",
+                    height: "540px",
+                    sources: [
+                        {
+                            src: "https://v-cdn.zjol.com.cn/279761.mp4?userId=44ee8296-cff7-4580-a6de-6c4e8285995f",
+                            type: "video/mp4"
+                        }
+                    ]
                 }
-            }
-        },
-        components: {
-            myVideo
+            };
         }
     }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-    .body {
-        background: #23aa67;
-    }
-</style>
