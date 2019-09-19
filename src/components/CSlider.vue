@@ -1,6 +1,6 @@
 <template>
     <!-- Make a div wrapped slider,set height and width -->
-    <div class="cslider">
+    <div>
         <!-- Using the slider component -->
         <slider :options="options" @slide='slide' @tap='onTap' @init='onInit'>
             <!-- slideritem wrapped package with the components you need -->
@@ -16,31 +16,28 @@
                 </div>
 
             </slideritem> -->
+
             <slideritem>
-                <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-                <!-- <div style="'background': '#000000'"></div> -->
-                <div>
-                    <video class="videoClass" width="100%" height="100%" id="thevideo4" preload="auto"
-                           src="https://appvideo.www.gov.cn/html5/2018/x264_hb.mp4" poster="../assets/yulan.jpg"
-                           controls="">
-                    </video>
-                
-                    
+                <Page1 class="page">
+
+                </Page1>
+                <div class="arrow fadeOutUp">
+                    <img src="../assets/arrow.png" width="100%"/>
+                </div>
+            </slideritem>
+            <slideritem>
+                <Page2 class="page">
+
+                </Page2>
+                <div class="arrow fadeOutUp">
+                    <img src="../assets/arrow.png" width="100%"/>
                 </div>
             </slideritem>
 
             <slideritem>
-            
-                <div width="500" height="500">
-                    <img src="../assets/i1.jpeg" alt="Smiley face" width="100%" height="100%">
-                </div>
-            </slideritem>
+                <Page3 class="page">
 
-            <slideritem>
-                <Page1></Page1>
-            </slideritem>
-            <slideritem>
-                <Page2></Page2>
+                </Page3>
             </slideritem>
 
             <!-- Customizable loading -->
@@ -52,34 +49,13 @@
     // import slider components
     import {slider, slideritem} from 'vue-concise-slider';
     import Page1 from './Page1.vue';
-     import Page2 from './Page2.vue'
-    // import Page3 from './Page3.vue'
+    import Page2 from './Page2.vue'
+    import Page3 from './Page3.vue'
 
     export default {
         name: 'CSlider',
         data() {
             return {
-                //data list [array]
-                someList: [
-                    {
-                        page:{
-
-                        },
-                        style: {
-                            'background': '#000000'
-                        }
-                    },
-                    {
-                        style: {
-                            'background': '#4bbfc3'
-                        }
-                    },
-                    {
-                        style: {
-                            'background': '#7baabe'
-                        }
-                    }
-                ],
                 //Slider configuration [obj]
                 options: {
                     currentPage: 0,
@@ -91,13 +67,19 @@
             slider,
             slideritem,
             Page1,
-            Page2
+            Page2,
+            Page3
         }
     }
 </script>
 
 
 <style lang="scss" scoped>
+
+    .page {
+        width: 100%;
+        height: 100%;
+    }
 
     .arrow {
         position: absolute;

@@ -11,6 +11,7 @@
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
     "vue-concise-slider": "^3.4.2",
+    "vue-video": "^0.1.7",
     "weixin-js-sdk": "^1.4.0-test"
   },
   "devDependencies": {

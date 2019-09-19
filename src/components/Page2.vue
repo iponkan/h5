@@ -1,6 +1,6 @@
 <template>
-    <div class="page"> 
-        <img src="../assets/i3.jpeg" alt="Smiley face" width="100%" height="100%">
+    <div class="body">
+        <img src="../assets/i2.jpeg" alt="food" class="img">
     </div>
 </template>
 
@@ -12,21 +12,15 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    h3 {
-        margin: 30px 0 0;
+
+    .body {
+        background: #42b983;
     }
 
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    li {
-        display: inline-block;
-        margin: 0 10px;
-    }
-
-    a {
-        color: #42b983;
+    .img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        text-align: center;
     }
 </style>
