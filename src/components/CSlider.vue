@@ -3,19 +3,15 @@
     <div>
         <!-- Using the slider component -->
         <slider :options="options" @slide='slide' @tap='onTap' @init='onInit'>
-            <!-- slideritem wrapped package with the components you need -->
-            <!-- <slideritem v-for="(item,index) in someList" :key="index" :style="item.style">
-                <div v-if="index < someList.length-1" class="arrow fadeOutUp">
+
+            <slideritem>
+                <Page0 class="page">
+
+                </Page0>
+                <div class="arrow fadeOutUp">
                     <img src="../assets/arrow.png" width="100%"/>
                 </div>
-                <div v-if="index === 0">
-                    <video class="videoClass" width="100%" height="100%" id="thevideo4" preload="auto"
-                           src="https://appvideo.www.gov.cn/html5/2018/x264_hb.mp4" poster="../assets/yulan.jpg"
-                           controls="">
-                    </video>
-                </div>
-
-            </slideritem> -->
+            </slideritem>
 
             <slideritem>
                 <Page1 class="page">
@@ -51,6 +47,7 @@
     import Page1 from './Page1.vue';
     import Page2 from './Page2.vue'
     import Page3 from './Page3.vue'
+    import Page0 from './Page0.vue'
 
     export default {
         name: 'CSlider',
@@ -68,7 +65,8 @@
             slideritem,
             Page1,
             Page2,
-            Page3
+            Page3,
+            Page0
         }
     }
 </script>

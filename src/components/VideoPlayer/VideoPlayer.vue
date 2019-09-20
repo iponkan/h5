@@ -36,5 +36,5 @@
 </script>
 
 <style scoped>
-    @import "./video.scss";
+    @import "./_VideoPlayer.scss";
 </style>
