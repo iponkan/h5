@@ -1,11 +1,12 @@
 <template>
     <div>
-        <video ref="videoPlayer" class="vjs-custom-skin"></video>
+        <video ref="videoPlayer" class="video-js"></video>
     </div>
 </template>
 
 <script>
     import videojs from 'video.js';
+    import 'video.js/dist/video-js.css'
 
     export default {
         name: "VideoPlayer",
@@ -34,7 +35,3 @@
         }
     }
 </script>
-
-<style scoped>
-    @import "./_VideoPlayer.scss";
-</style>

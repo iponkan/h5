@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <d-player @play="play" :options="options"
-                  class="page0_palyer"></d-player>
+                  class="page1_palyer"></d-player>
     </div>
 </template>
 
@@ -38,7 +38,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     body {
         margin: 0;
         padding: 0;
@@ -50,7 +50,7 @@
         text-decoration: none;
     }
 
-    .page0_palyer {
+    .page1_palyer {
         width: 100%;
         height: auto;
     }

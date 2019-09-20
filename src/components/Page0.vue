@@ -1,6 +1,6 @@
 <template>
     <div>
-        <video-player :options="videoOptions"/>
+        <video-player :options="videoOptions" class="page0_palyer"/>
     </div>
 </template>
 
@@ -8,7 +8,6 @@
     import videoPlayer from "./VideoPlayer/VideoPlayer.vue";
 
     export default {
-        name: "page1",
         components: {
             videoPlayer
         },
@@ -30,3 +29,21 @@
         }
     }
 </script>
+
+<style scoped>
+    body {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    a {
+        color: #42b983;
+        text-decoration: none;
+    }
+
+    .page0_palyer {
+        width: 100%;
+        height: auto;
+    }
+</style>
