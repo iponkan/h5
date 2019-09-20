@@ -5,15 +5,6 @@
         <slider :options="options" @slide='slide' @tap='onTap' @init='onInit'>
 
             <slideritem>
-                <Page0 class="page">
-
-                </Page0>
-                <div class="arrow fadeOutUp">
-                    <img src="../assets/arrow.png" width="100%"/>
-                </div>
-            </slideritem>
-
-            <slideritem>
                 <Page1 class="page">
 
                 </Page1>
@@ -47,7 +38,6 @@
     import Page1 from './Page1.vue';
     import Page2 from './Page2.vue'
     import Page3 from './Page3.vue'
-    import Page0 from './Page0.vue'
 
     export default {
         name: 'CSlider',
@@ -66,7 +56,6 @@
             Page1,
             Page2,
             Page3,
-            Page0
         }
     }
 </script>
