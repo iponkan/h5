@@ -1,6 +1,6 @@
 <template>
     <div>
-        <video ref="videoPlayer" class="video-js"></video>
+        <video ref="videoPlayer" class="vjs-custom-skin"></video>
     </div>
 </template>
 
@@ -36,5 +36,5 @@
 </script>
 
 <style scoped>
-    @import "video.scss";
+    @import "./video.scss";
 </style>
