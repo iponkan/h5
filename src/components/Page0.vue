@@ -2,16 +2,15 @@
     <div id="app">
         <h1>Vue-DPlayer</h1>
         <h2>A Vue 2.x component of <a href="https://github.com/DIYgod/DPlayer" target="_blank">DPlayer</a></h2>
-        <d-player :options="options"
-                  @play="play"
-                  ref="player">
-        </d-player>
-        <button class="btn btn-primary" @click="switchHandle">switch</button>
+        <video-player :options="options"
+                     @play="play"
+                     ref="player">
+        </video-player>
     </div>
 </template>
 
 <script>
-    import DPlayer from "./DPlayer/DPlayer";
+    import videoPlayer from "./DPlayer/DPlayer.vue";
 
     export default {
         data() {
@@ -31,21 +30,15 @@
                 },
             }
         },
-        mounted() {
-            this.player = this.$refs.player.dp;
-        },
         methods: {
             play() {
+                const player = this.$refs.player.dp
+                player.play()
                 console.log('play callback')
-            },
-            switchHandle() {
-                this.player._setVideoUrl({
-                    url: 'http://static.smartisanos.cn/common/video/video-jgpro.mp4'
-                })
             }
         },
         components: {
-            'd-player': DPlayer,
+            videoPlayer,
         }
     }
 </script>
@@ -62,7 +55,7 @@
         text-decoration: none;
     }
 
-    .dplayer {
+    .video_palyer {
         width: 800px;
         margin: 50px auto;
     }
@@ -79,7 +72,7 @@
     }
 
     @media (max-width: 768px) {
-        .dplayer {
+        .video_palyer {
             width: 90%;
         }
 

@@ -5,12 +5,12 @@
 </template>
 
 <script>
-    import VideoPlayer from "./VideoPlayer/VideoPlayer.vue";
+    import videoPlayer from "./VideoPlayer/VideoPlayer.vue";
 
     export default {
         name: "page1",
         components: {
-            VideoPlayer
+            videoPlayer
         },
         data() {
             return {
