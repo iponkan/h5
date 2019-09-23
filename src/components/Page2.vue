@@ -1,12 +1,11 @@
 <template>
     <div class="body">
         <div>
-        <img src="../assets/i2.jpeg" v-bind:style="imgeAni1" />
+            <img src="../assets/i2.jpeg" v-bind:style="imgeAni1" />
         </div>
         <div>
-        <img src="../assets/i2.jpeg" v-bind:style="imgeAni2" />
+            <img src="../assets/i2.jpeg" v-bind:style="imgeAni2" />
         </div>
-        
     </div>
 </template>
 
@@ -42,7 +41,7 @@ export default {
                 };
             }
         },
-        imgeAni2:function(){
+        imgeAni2: function() {
             if (this.anirun) {
                 return {
                     width: "100%",
@@ -51,12 +50,10 @@ export default {
                     transform: "rotateZ(360deg)",
                     position: "left",
                     transition: "transform 2s",
-                    "transition-delay":"2s",
+                    "transition-delay": "2s"
                 };
             } else {
                 return {
-                    
-                    
                     width: "100%",
                     height: "auto"
                 };

@@ -2,17 +2,31 @@
     <!-- Make a div wrapped slider,set height and width -->
     <div>
         <!-- Using the slider component -->
-        <slider :options="options" @slide="slide" @tap="onTap" @init="onInit">
+        <slider
+            :options="options"
+            @slide="slide"
+            @tap="onTap"
+            @init="onInit"
+            ref="slider"
+        >
             <slideritem>
                 <Page1 class="page" ref="page1"> </Page1>
                 <div class="arrow fadeOutUp">
-                    <img src="../assets/arrow.png" width="100%" />
+                    <img
+                        src="../assets/arrow.png"
+                        width="100%"
+                        @click="slideNext"
+                    />
                 </div>
             </slideritem>
             <slideritem>
                 <Page2 class="page" ref="page2"> </Page2>
                 <div class="arrow fadeOutUp">
-                    <img src="../assets/arrow.png" width="100%" />
+                    <img
+                        src="../assets/arrow.png"
+                        width="100%"
+                        @click="slideNext"
+                    />
                 </div>
             </slideritem>
 
@@ -61,9 +75,9 @@ export default {
             console.log("=============" + data.currentPage);
             if (data.currentPage == 0) {
                 this.$refs.page1.runAni();
-            }else if(data.currentPage == 1){
+            } else if (data.currentPage == 1) {
                 this.$refs.page2.runAni();
-            } else if(data.currentPage == 2){
+            } else if (data.currentPage == 2) {
                 this.$refs.page3.runAni();
             }
         },
@@ -72,6 +86,11 @@ export default {
         },
         onInit(data) {
             console.log(data);
+        },
+
+    
+        slideNext: function() {
+            this.$refs.slider.$emit("slideNext");
         }
     }
 };

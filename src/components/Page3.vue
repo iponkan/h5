@@ -6,7 +6,7 @@
 
 <script>
     export default {
-        name: 'page2',
+        name: 'page3',
         data() {
         return {
             anirun: false
