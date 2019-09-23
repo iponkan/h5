@@ -31,6 +31,9 @@
         methods: {
             play() {
                 console.log('play callback')
+            },
+            runAni:function(){
+                console.log('runAni')
             }
         },
         components: {
