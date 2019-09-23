@@ -47,7 +47,7 @@ export default {
                     width: "100%",
                     height: "auto",
                     position: "absolute",
-                    transform: "rotateZ(360deg)",
+                    transform: "translate(0%)",
                     position: "left",
                     transition: "transform 2s",
                     "transition-delay": "2s"
@@ -55,7 +55,8 @@ export default {
             } else {
                 return {
                     width: "100%",
-                    height: "auto"
+                    height: "auto",
+                    transform:"translate(-100%)"
                 };
             }
         }

@@ -81,12 +81,12 @@ export default {
                 this.$refs.page3.runAni();
             }
         },
-        onTap(data) {
-            console.log(data);
-        },
-        onInit(data) {
-            console.log(data);
-        },
+        // onTap(data) {
+        //     console.log(data);
+        // },
+        // onInit(data) {
+        //     console.log(data);
+        // },
 
     
         slideNext: function() {
