@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div :class="anirun==true?'afterAni':null">
+    <div style="transform: perspective(1000)">
+        <div :class="anirun == true ? 'afterAni' : null">
             <slot></slot>
         </div>
     </div>
@@ -18,14 +18,13 @@ export default {
         runAni: function() {
             this.anirun = true;
             console.log("comp1 runAni");
-        },
-        
+        }
     },
     computed: {
-        setClass:function(){
-            if(this.anirun){
+        setClass: function() {
+            if (this.anirun) {
                 console.log("true true");
-                return 'afterAni';
+                return "afterAni";
             }
         }
     }

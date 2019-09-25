@@ -2,7 +2,6 @@
     <div class="body">
         <Comp1
             ref="comp1"
-            style="transition : transform 2s ; transition-delay: 2s"
         >
             <img src="../assets/i2.jpeg" width="100%" height="100%" />
         </Comp1>

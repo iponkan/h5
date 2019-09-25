@@ -25,13 +25,10 @@
     display: block;
 }
 
-/* 绕y轴旋转360度 */
-
 .rotate_360_y {
     width: 100%;
     height: auto;
     transform: rotateY(360deg);
     transition: transform 2s;
     display: block;
-
 }

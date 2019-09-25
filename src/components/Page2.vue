@@ -1,6 +1,6 @@
 <template>
     <div class="body">
-        <div>
+        <div style="transform: perspective(1000)">
             <img
                 src="../assets/i3.jpeg"
                 v-bind:class="anirun?'rotate_360_y':'common_style'"
@@ -34,7 +34,7 @@ export default {
             this.anirun = true;
             console.log("Page2 runAni");
         }
-    },
+    }
 };
 </script>
 
