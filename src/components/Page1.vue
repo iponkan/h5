@@ -7,7 +7,7 @@
 
 <script>
     import VueDPlayer from 'vue-dplayer'
-    import 'vue-dplayer/dist/vue-dplayer.css'
+    import '../style/dplayer-style.css'
 
     export default {
         data() {
@@ -32,7 +32,7 @@
             play() {
                 console.log('play callback')
             },
-            runAni:function(){
+            runAni: function () {
                 console.log('runAni')
             }
         },
