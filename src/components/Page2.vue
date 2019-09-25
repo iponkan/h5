@@ -1,10 +1,22 @@
 <template>
     <div class="body">
         <div>
-            <img src="../assets/i2.jpeg" v-bind:style="imgeAni1" />
+            <img
+                src="../assets/i3.jpeg"
+                v-bind:class="anirun?'rotate_360_y':'common_style'"
+            />
         </div>
+
         <div>
-            <img src="../assets/i2.jpeg" v-bind:style="imgeAni2" />
+            <img
+                src="../assets/i2.jpeg"
+                v-bind:class="
+                    anirun
+                        ? 'slidein_left_2_right_after'
+                        : 'slidein_left_2_right_before'
+                "
+                style="transition-delay: 2s"
+            />
         </div>
     </div>
 </template>
@@ -23,44 +35,6 @@ export default {
             console.log("Page2 runAni");
         }
     },
-    computed: {
-        imgeAni1: function() {
-            if (this.anirun) {
-                return {
-                    width: "100%",
-                    height: "auto",
-                    position: "absolute",
-                    transform: "rotateY(360deg)",
-                    position: "left",
-                    transition: "transform 2s"
-                };
-            } else {
-                return {
-                    width: "100%",
-                    height: "auto"
-                };
-            }
-        },
-        imgeAni2: function() {
-            if (this.anirun) {
-                return {
-                    width: "100%",
-                    height: "auto",
-                    position: "absolute",
-                    transform: "translate(0%)",
-                    position: "left",
-                    transition: "transform 2s",
-                    "transition-delay": "2s"
-                };
-            } else {
-                return {
-                    width: "100%",
-                    height: "auto",
-                    transform:"translate(-100%)"
-                };
-            }
-        }
-    }
 };
 </script>
 
@@ -68,6 +42,7 @@ export default {
 <style scoped>
 /*引入公共样式*/
 @import "../style/main.scss";
+@import "../style/anis.scss";
 
 .body {
     background: #42b983;

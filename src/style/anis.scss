@@ -1,0 +1,37 @@
+/* 使用 ‘/**\/ ’样式注释 */
+
+
+/*一般的样式 */
+.common_style {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*从左到右滑入 */
+.slidein_left_2_right_before {
+    width: 100%;
+    height: auto;
+    transform: translate(-100%);
+    transition: transform 2s;
+    display: block;
+}
+
+.slidein_left_2_right_after {
+    width: 100%;
+    height: auto;
+    transform: translate(0%);
+    transition: transform 2s;
+    display: block;
+}
+
+/* 绕y轴旋转360度 */
+
+.rotate_360_y {
+    width: 100%;
+    height: auto;
+    transform: rotateY(360deg);
+    transition: transform 2s;
+    display: block;
+
+}

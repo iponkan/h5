@@ -11,21 +11,19 @@
         >
             <slideritem>
                 <Page1 class="page" ref="page1"> </Page1>
-                <div class="arrow fadeOutUp">
+                <div class="arrow fadeOutUp" @click="slideNext">
                     <img
                         src="../assets/arrow.png"
                         width="100%"
-                        @click="slideNext"
                     />
                 </div>
             </slideritem>
             <slideritem>
                 <Page2 class="page" ref="page2"> </Page2>
-                <div class="arrow fadeOutUp">
+                <div class="arrow fadeOutUp" @click="slideNext">
                     <img
                         src="../assets/arrow.png"
                         width="100%"
-                        @click="slideNext"
                     />
                 </div>
             </slideritem>
@@ -81,12 +79,12 @@ export default {
                 this.$refs.page3.runAni();
             }
         },
-        // onTap(data) {
-        //     console.log(data);
-        // },
-        // onInit(data) {
-        //     console.log(data);
-        // },
+        onTap(data) {
+            console.log(data);
+        },
+        onInit(data) {
+            console.log(data);
+        },
 
     
         slideNext: function() {
