@@ -1,7 +1,8 @@
 <template>
     <div id="app">
         <d-player @play="play" :options="options"
-                  class="page1_palyer"></d-player>
+                  class="page1_palyer"
+                  ref="player"></d-player>
     </div>
 </template>
 
@@ -18,22 +19,24 @@
                         url: 'https://v-cdn.zjol.com.cn/279761.mp4?userId=44ee8296-cff7-4580-a6de-6c4e8285995f',
                         pic: 'https://v-img.zjol.com.cn/279757.jpg'
                     },
-                    autoplay: false,
-                    contextmenu: [
-                        {
-                            text: 'GitHub',
-                            link: 'https://github.com/MoePlayer/vue-dplayer'
-                        }
-                    ]
+                    autoplay: false
                 },
+                player: null,
             }
+        },
+        mounted() {
+            this.player = this.$refs.player.dp
         },
         methods: {
             play() {
                 console.log('play callback')
             },
             runAni: function () {
+                this.player.play();
                 console.log('runAni')
+            },
+            switchHandle() {
+                this.player.pause()
             }
         },
         components: {
