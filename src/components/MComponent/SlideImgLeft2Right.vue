@@ -116,8 +116,6 @@ export default {
             setTimeout(()=>{
                 this.pick('4');
             }, 6000);
-
-        
         },
         pick: function(num) {
             this.picked = num;

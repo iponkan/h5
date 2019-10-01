@@ -63,6 +63,11 @@ export default {
         Page2,
         Page3
     },
+    mounted: {
+        mount: function() {
+            console.log("mounted=====");
+        }
+    },
     methods: {
         // Listener event
         slide(data) {
@@ -100,42 +105,16 @@ export default {
             document.body.style.setProperty("--screenWidth", width - 60 + "px");
             document.body.style.setProperty("--screenHeight", "400px");
         },
-        methods: {
-            // Listener event
-            slide(data) {
-                console.log("=============" + data.currentPage);
-                if (data.currentPage === 0) {
-                    this.$refs.page1.runAni();
-                } else if (data.currentPage === 1) {
-                    this.$refs.page2.runAni();
-                    this.$refs.page1.switchHandle();
-                } else if (data.currentPage === 2) {
-                    this.$refs.page3.runAni();
-                }
-            },
-            onTap(data) {
-                console.log(data);
-            },
-            onInit(data) {
-                console.log(data);
-            },
+        slideNext: function() {
+            this.curPage = this.curPage + 1;
+            this.$refs.slider.$emit("slideNext");
 
-            slideNext: function() {
-                this.curPage = this.curPage + 1;
-                this.$refs.slider.$emit("slideNext");
-
-                if (this.curPage == 0) {
-                    this.$refs.page1.runAni();
-                } else if (this.curPage == 1) {
-                    this.$refs.page2.runAni();
-                } else if (this.curPage == 2) {
-                    this.$refs.page3.runAni();
-                }
-            }
-        },
-        mounted: {
-            mount: function() {
-                console.log("mounted=====");
+            if (this.curPage == 0) {
+                this.$refs.page1.runAni();
+            } else if (this.curPage == 1) {
+                this.$refs.page2.runAni();
+            } else if (this.curPage == 2) {
+                this.$refs.page3.runAni();
             }
         }
     }

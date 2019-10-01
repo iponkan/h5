@@ -12,7 +12,7 @@
         },
         computed: {},
         mounted() {
-            // this.wScroll(this.$refs.scroll);
+            //  this.wScroll(this.$refs.scroll);
         },
         methods: {
             // wScroll(elem) {
