@@ -12,13 +12,13 @@
             <slideritem>
                 <Page1 class="page" ref="page1"></Page1>
                 <div class="arrow fadeOutUp" @click="slideNext">
-                    <img src="../assets/arrow.png" width="100%" />
+                    <img src="https://skycdn-1257948461.cos.ap-shanghai.myqcloud.com/arrow.png" width="100%" />
                 </div>
             </slideritem>
             <slideritem>
                 <Page2 class="page" ref="page2"></Page2>
                 <div class="arrow fadeOutUp" @click="slideNext">
-                    <img src="../assets/arrow.png" width="100%" />
+                    <img src="https://skycdn-1257948461.cos.ap-shanghai.myqcloud.com/arrow.png" width="100%" />
                 </div>
             </slideritem>
 

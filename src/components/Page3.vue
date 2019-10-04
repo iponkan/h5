@@ -1,10 +1,5 @@
 <template>
     <div class="body">
-        <!-- <Comp1
-            ref="comp1"
-        >
-            <img src="../assets/i2.jpeg" width="100%" height="100%" />
-        </Comp1> -->
         <SlideImgLeft2Right ref="comp1"></SlideImgLeft2Right>
     </div>
 </template>
