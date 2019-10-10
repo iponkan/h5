@@ -4,6 +4,7 @@
         <!--        <HelloWorld msg="Welcome to Your Vue.js App"/>-->
         <Scroll style="width:100%;height:100%;">
             <CSlider style="width:100%;height:100%" />
+
         </Scroll>
         
         <audio

@@ -1,5 +1,6 @@
 <template>
     <div class="body">
+<<<<<<< HEAD
         <div id="div1" v-bind:class="anirun ? 'bounceIn' : null">
             <img src="../assets/chushi.jpeg" class="imgbg" />
         </div>
@@ -61,6 +62,14 @@
         <div id="div8">
             <span id="textStyle">美味多多</span>
         </div>
+=======
+        <!-- <Comp1
+            ref="comp1"
+        >
+            <img src="../assets/i2.jpeg" width="100%" height="100%" />
+        </Comp1> -->
+        <SlideImgLeft2Right ref="comp1"></SlideImgLeft2Right>
+>>>>>>> e1a6b2b... Revert "图片cdn加速"
     </div>
 </template>
 

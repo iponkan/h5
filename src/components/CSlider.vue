@@ -10,6 +10,7 @@
             ref="slider"
         >
             <slideritem>
+<<<<<<< HEAD
                 <BeautyPage class="page" ref="page1"></BeautyPage>
             </slideritem>
             <slideritem>
@@ -17,6 +18,18 @@
                 <!-- <div class="arrow fadeOutUp" @click="slideNext">
                     <img src="../assets/arrow.png" width="100%" />
                 </div> -->
+=======
+                <Page1 class="page" ref="page1"></Page1>
+                <div class="arrow fadeOutUp" @click="slideNext">
+                    <img src="../assets/arrow.png" width="100%" />
+                </div>
+            </slideritem>
+            <slideritem>
+                <Page2 class="page" ref="page2"></Page2>
+                <div class="arrow fadeOutUp" @click="slideNext">
+                    <img src="../assets/arrow.png" width="100%" />
+                </div>
+>>>>>>> e1a6b2b... Revert "图片cdn加速"
             </slideritem>
 
             <slideritem>

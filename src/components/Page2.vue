@@ -2,16 +2,30 @@
     <div class="body">
         <div class="div1_3">
             <img
+<<<<<<< HEAD
                 src="../assets/i1.jpeg"
                 v-bind:class="anirun ? 'bounceInLeft' : null"
+=======
+                src="../assets/i3.jpeg"
+                v-bind:class="anirun?'rotate_360_y':'common_style'"
+>>>>>>> e1a6b2b... Revert "图片cdn加速"
             />
         </div>
 
         <div class="div1_3">
             <img
                 src="../assets/i2.jpeg"
+<<<<<<< HEAD
                 v-bind:class="anirun ? 'bounceInRight' : null"
                 style="animation-delay: 1s"
+=======
+                v-bind:class="
+                    anirun
+                        ? 'slidein_left_2_right_after'
+                        : 'slidein_left_2_right_before'
+                "
+                style="transition-delay: 2s"
+>>>>>>> e1a6b2b... Revert "图片cdn加速"
             />
         </div>
 
