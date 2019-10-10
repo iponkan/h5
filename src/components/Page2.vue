@@ -2,14 +2,14 @@
     <div class="body">
         <div style="transform: perspective(1000)">
             <img
-                src="https://skycdn-1257948461.cos.ap-shanghai.myqcloud.com/i3.jpeg"
+                src="../assets/i3.jpeg"
                 v-bind:class="anirun?'rotate_360_y':'common_style'"
             />
         </div>
 
         <div>
             <img
-                src="https://skycdn-1257948461.cos.ap-shanghai.myqcloud.com/i2.jpeg"
+                src="../assets/i2.jpeg"
                 v-bind:class="
                     anirun
                         ? 'slidein_left_2_right_after'
