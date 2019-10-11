@@ -26,6 +26,10 @@
                 <Page3 class="page" ref="page3"></Page3>
             </slideritem>
 
+            <slideritem>
+                <Page4 class="page" ref="pagetest"></Page4>
+            </slideritem>
+
             <!-- Customizable loading -->
             <div slot="loading">loading...</div>
         </slider>
@@ -37,6 +41,7 @@ import { slider, slideritem } from "vue-concise-slider";
 import Page1 from "./Page1.vue";
 import Page2 from "./Page2.vue";
 import Page3 from "./Page3.vue";
+import Page4 from "./Page4.vue";
 
 export default {
     name: "CSlider",
@@ -61,7 +66,8 @@ export default {
         slideritem,
         Page1,
         Page2,
-        Page3
+        Page3,
+        Page4,
     },
     mounted: {
         mount: function() {
@@ -89,6 +95,8 @@ export default {
                     this.$refs.page2.runAni();
                 } else if (data.currentPage == 2) {
                     this.$refs.page3.runAni();
+                } else if(data.currentPage == 3){
+                    this.$refs.pagetest.runAni();
                 }
                 this.curPage = data.currentPage;
             }
