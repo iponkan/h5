@@ -10,28 +10,14 @@
             ref="slider"
         >
             <slideritem>
-<<<<<<< HEAD
                 <BeautyPage class="page" ref="page1"></BeautyPage>
             </slideritem>
             <slideritem>
                 <BeautyPage2 class="page" ref="page2"></BeautyPage2>
-                <!-- <div class="arrow fadeOutUp" @click="slideNext">
-                    <img src="../assets/arrow.png" width="100%" />
-                </div> -->
-=======
-                <Page1 class="page" ref="page1"></Page1>
                 <div class="arrow fadeOutUp" @click="slideNext">
                     <img src="../assets/arrow.png" width="100%" />
                 </div>
             </slideritem>
-            <slideritem>
-                <Page2 class="page" ref="page2"></Page2>
-                <div class="arrow fadeOutUp" @click="slideNext">
-                    <img src="../assets/arrow.png" width="100%" />
-                </div>
->>>>>>> e1a6b2b... Revert "图片cdn加速"
-            </slideritem>
-
             <slideritem>
                 <BeautyPage1 class="page" ref="page3"></BeautyPage1>
             </slideritem>
@@ -119,6 +105,7 @@ import BeautyPage15 from "./pages/BeautyPage15.vue";
 import Page2 from "./Page2.vue";
 import Page3 from "./Page3.vue";
 import Page4 from "./Page4.vue";
+import MainPage from "./MainPage.vue";
 
 export default {
     name: "CSlider",
