@@ -24,6 +24,9 @@
     export default {
         name: 'app',
         mounted() {
+            if ('development' === process.env.NODE_ENV.toString()) {
+                new this.$vconsole();
+            }
             wxapi.wxRegister(this.wxRegCallback);
         },
         methods: {
