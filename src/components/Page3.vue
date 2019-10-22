@@ -5,33 +5,62 @@
         </div>
 
         <div id="div2">
-            <img class="imgStyle" src="../assets/i2.jpeg" v-bind:class="anirun ? 'rotateInDownLeft' : null" style="animation-delay: 1s"/>
+            <img
+                class="imgStyle"
+                src="../assets/i2.jpeg"
+                v-bind:class="anirun ? 'rotateInDownLeft' : null"
+                style="animation-delay: 1s"
+            />
         </div>
 
         <div id="div3">
-            <img class="imgStyle" src="../assets/i3.jpeg" v-bind:class="anirun ? 'rotateInDownLeft' : null" style="animation-delay: 1s"/>
+            <img
+                class="imgStyle"
+                src="../assets/i3.jpeg"
+                v-bind:class="anirun ? 'rotateInDownLeft' : null"
+                style="animation-delay: 1s"
+            />
         </div>
 
         <div id="div4">
-            <img class="imgStyle" src="../assets/i7.jpeg" v-bind:class="anirun ? 'rotateInDownLeft' : null" style="animation-delay: 1s"/>
+            <img
+                class="imgStyle"
+                src="../assets/i7.jpeg"
+                v-bind:class="anirun ? 'rotateInDownLeft' : null"
+                style="animation-delay: 1s"
+            />
         </div>
 
         <div id="div5">
-            <img class="imgStyle" src="../assets/i2.jpeg" v-bind:class="anirun ? 'rotateInDownRight' : null" style="animation-delay: 1s"/>
+            <img
+                class="imgStyle"
+                src="../assets/i2.jpeg"
+                v-bind:class="anirun ? 'rotateInDownRight' : null"
+                style="animation-delay: 1s"
+            />
         </div>
 
         <div id="div6">
-            <img class="imgStyle" src="../assets/i3.jpeg" v-bind:class="anirun ? 'rotateInDownRight' : null" style="animation-delay: 1s"/>
+            <img
+                class="imgStyle"
+                src="../assets/i3.jpeg"
+                v-bind:class="anirun ? 'rotateInDownRight' : null"
+                style="animation-delay: 1s"
+            />
         </div>
 
         <div id="div7">
-            <img class="imgStyle" src="../assets/i7.jpeg" v-bind:class="anirun ? 'rotateInDownRight' : null" style="animation-delay: 1s"/>
+            <img
+                class="imgStyle"
+                src="../assets/i7.jpeg"
+                v-bind:class="anirun ? 'rotateInDownRight' : null"
+                style="animation-delay: 1s"
+            />
         </div>
 
         <div id="div8">
             <span id="textStyle">美味多多</span>
         </div>
-
     </div>
 </template>
 
@@ -48,6 +77,9 @@ export default {
         runAni: function() {
             this.anirun = true;
             console.log("Page3 runAni");
+        },
+        pauseAni: function() {
+            this.anirun = false;
         }
     }
 };
@@ -60,7 +92,7 @@ export default {
 .body {
     width: 100%;
     height: 100%;
-    text-align:center;
+    text-align: center;
 }
 
 #div1 {
@@ -116,7 +148,7 @@ export default {
     left: 5%;
 }
 
-#div8{
+#div8 {
     position: absolute;
     width: 50%;
     height: 50%;
@@ -147,15 +179,13 @@ export default {
     color: black;
     white-space: pre-wrap;
     border-width: 1px;
-    border-color:gainsboro;
-    border-style: solid;  
+    border-color: gainsboro;
+    border-style: solid;
     background: azure;
-    letter-spacing:25px;
-    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.48), 0 6px 14px rgba(0, 0, 0, 0.32) ;
+    letter-spacing: 25px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.48), 0 6px 14px rgba(0, 0, 0, 0.32);
     margin-top: 10px;
     padding-top: 10px;
-    text-shadow:5px 2px 6px #000;
-    
-    
+    text-shadow: 5px 2px 6px #000;
 }
 </style>

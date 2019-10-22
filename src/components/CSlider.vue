@@ -10,35 +10,99 @@
             ref="slider"
         >
             <slideritem>
-                <Page1 class="page" ref="page1"></Page1>
-                <div class="arrow fadeOutUp" @click="slideNext">
-                    <img src="../assets/arrow.png" width="100%" />
-                </div>
+                <BeautyPage class="page" ref="page1"></BeautyPage>
             </slideritem>
             <slideritem>
-                <Page2 class="page" ref="page2"></Page2>
-                <div class="arrow fadeOutUp" @click="slideNext">
+                <BeautyPage2 class="page" ref="page2"></BeautyPage2>
+                <!-- <div class="arrow fadeOutUp" @click="slideNext">
                     <img src="../assets/arrow.png" width="100%" />
-                </div>
+                </div> -->
             </slideritem>
 
             <slideritem>
-                <Page3 class="page" ref="page3"></Page3>
+                <BeautyPage1 class="page" ref="page3"></BeautyPage1>
             </slideritem>
 
             <slideritem>
-                <Page4 class="page" ref="pagetest"></Page4>
+                <BeautyPage3 class="page" ref="beautyPage3"></BeautyPage3>
+            </slideritem>
+
+            <slideritem>
+                <BeautyPage4 class="page" ref="beautyPage4"></BeautyPage4>
+            </slideritem>
+
+            <slideritem>
+                <BeautyPage5 class="page" ref="beautyPage5"></BeautyPage5>
+            </slideritem>
+
+            <slideritem>
+                <BeautyPage6 class="page" ref="beautyPage6"></BeautyPage6>
+            </slideritem>
+
+            <slideritem>
+                <BeautyPage7 class="page" ref="beautyPage7"></BeautyPage7>
+            </slideritem>
+
+            <slideritem>
+                <BeautyPage8 class="page" ref="beautyPage8"></BeautyPage8>
+            </slideritem>
+
+            <slideritem>
+                <BeautyPage9 class="page" ref="beautyPage9"></BeautyPage9>
+            </slideritem>
+
+            <slideritem>
+                <BeautyPage10 class="page" ref="beautyPage10"></BeautyPage10>
+            </slideritem>
+
+            <slideritem>
+                <BeautyPage11 class="page" ref="beautyPage11"></BeautyPage11>
+            </slideritem>
+
+            <slideritem>
+                <BeautyPage12 class="page" ref="beautyPage12"></BeautyPage12>
+            </slideritem>
+
+            <slideritem>
+                <BeautyPage13 class="page" ref="beautyPage13"></BeautyPage13>
+            </slideritem>
+
+            <slideritem>
+                <BeautyPage14 class="page" ref="beautyPage14"></BeautyPage14>
+            </slideritem>
+
+            <slideritem>
+                <BeautyPage15 class="page" ref="beautyPage15"></BeautyPage15>
             </slideritem>
 
             <!-- Customizable loading -->
             <div slot="loading">loading...</div>
         </slider>
+
+        <div class="arrow fadeOutUp" @click="slideNext">
+            <img src="../assets/arrow.png" width="100%" />
+        </div>
     </div>
 </template>
 <script>
 // import slider components
 import { slider, slideritem } from "vue-concise-slider";
-import Page1 from "./Page1.vue";
+import BeautyPage from "./pages/BeautyPage.vue";
+import BeautyPage1 from "./pages/BeautyPage1.vue";
+import BeautyPage2 from "./pages/BeautyPage2.vue";
+import BeautyPage3 from "./pages/BeautyPage3.vue";
+import BeautyPage4 from "./pages/BeautyPage4.vue";
+import BeautyPage5 from "./pages/BeautyPage5.vue";
+import BeautyPage6 from "./pages/BeautyPage6.vue";
+import BeautyPage7 from "./pages/BeautyPage7.vue";
+import BeautyPage8 from "./pages/BeautyPage8.vue";
+import BeautyPage9 from "./pages/BeautyPage9.vue";
+import BeautyPage10 from "./pages/BeautyPage10.vue";
+import BeautyPage11 from "./pages/BeautyPage11.vue";
+import BeautyPage12 from "./pages/BeautyPage12.vue";
+import BeautyPage13 from "./pages/BeautyPage13.vue";
+import BeautyPage14 from "./pages/BeautyPage14.vue";
+import BeautyPage15 from "./pages/BeautyPage15.vue";
 import Page2 from "./Page2.vue";
 import Page3 from "./Page3.vue";
 import Page4 from "./Page4.vue";
@@ -64,10 +128,25 @@ export default {
     components: {
         slider,
         slideritem,
-        Page1,
+        BeautyPage,
         Page2,
         Page3,
         Page4,
+        BeautyPage1,
+        BeautyPage2,
+        BeautyPage3,
+        BeautyPage4,
+        BeautyPage5,
+        BeautyPage6,
+        BeautyPage7,
+        BeautyPage8,
+        BeautyPage9,
+        BeautyPage10,
+        BeautyPage11,
+        BeautyPage12,
+        BeautyPage13,
+        BeautyPage14,
+        BeautyPage15
     },
     mounted: {
         mount: function() {
@@ -89,15 +168,7 @@ export default {
                     y2
             );
             if (x2 > 100 || y2 > 100) {
-                if (data.currentPage == 0) {
-                    this.$refs.page1.runAni();
-                } else if (data.currentPage == 1) {
-                    this.$refs.page2.runAni();
-                } else if (data.currentPage == 2) {
-                    this.$refs.page3.runAni();
-                } else if(data.currentPage == 3){
-                    this.$refs.pagetest.runAni();
-                }
+                this.slide2Page(data.currentPage);
                 this.curPage = data.currentPage;
             }
         },
@@ -105,24 +176,86 @@ export default {
             console.log("onTap");
         },
         onInit(data) {
-            console.log("onInit");
+            console.log("onInit=========");
             var width = window.screen.width;
             var height = window.screen.height;
             console.log("width = " + width);
             console.log("height = " + height);
             document.body.style.setProperty("--screenWidth", width - 60 + "px");
             document.body.style.setProperty("--screenHeight", "400px");
+
+            //init first page
+            this.$refs.page1.runAni();
         },
         slideNext: function() {
             this.curPage = this.curPage + 1;
             this.$refs.slider.$emit("slideNext");
+            this.slide2Page(this.curPage);
+        },
 
-            if (this.curPage == 0) {
+        slide2Page: function(pageindex) {
+            if (pageindex == 0) {
                 this.$refs.page1.runAni();
-            } else if (this.curPage == 1) {
+                this.$refs.page2.pauseAni();
+            } else if (pageindex == 1) {
                 this.$refs.page2.runAni();
-            } else if (this.curPage == 2) {
+                this.$refs.page1.pauseAni();
+                this.$refs.page3.pauseAni();
+            } else if (pageindex == 2) {
                 this.$refs.page3.runAni();
+                this.$refs.page2.pauseAni();
+                this.$refs.beautyPage3.pauseAni();
+            } else if (pageindex == 3) {
+                this.$refs.beautyPage3.runAni();
+                this.$refs.page3.pauseAni();
+                this.$refs.beautyPage4.pauseAni();
+            } else if (pageindex == 4) {
+                this.$refs.beautyPage4.runAni();
+                this.$refs.beautyPage3.pauseAni();
+                this.$refs.beautyPage5.pauseAni();
+            } else if (pageindex == 5) {
+                this.$refs.beautyPage5.runAni();
+                this.$refs.beautyPage4.pauseAni();
+                this.$refs.beautyPage6.pauseAni();
+            } else if (pageindex == 6) {
+                this.$refs.beautyPage5.pauseAni();
+                this.$refs.beautyPage6.runAni();
+                this.$refs.beautyPage7.pauseAni();
+            } else if (pageindex == 7) {
+                this.$refs.beautyPage6.pauseAni();
+                this.$refs.beautyPage7.runAni();
+                this.$refs.beautyPage8.pauseAni();
+            } else if (pageindex == 8) {
+                this.$refs.beautyPage7.pauseAni();
+                this.$refs.beautyPage8.runAni();
+                this.$refs.beautyPage9.pauseAni();
+            } else if (pageindex == 9) {
+                this.$refs.beautyPage8.pauseAni();
+                this.$refs.beautyPage9.runAni();
+                this.$refs.beautyPage10.pauseAni();
+            } else if (pageindex == 10) {
+                this.$refs.beautyPage9.pauseAni();
+                this.$refs.beautyPage10.runAni();
+                this.$refs.beautyPage11.pauseAni();
+            } else if (pageindex == 11) {
+                this.$refs.beautyPage10.pauseAni();
+                this.$refs.beautyPage11.runAni();
+                this.$refs.beautyPage12.pauseAni();
+            } else if (pageindex == 12) {
+                this.$refs.beautyPage11.pauseAni();
+                this.$refs.beautyPage12.runAni();
+                this.$refs.beautyPage13.pauseAni();
+            } else if (pageindex == 13) {
+                this.$refs.beautyPage12.pauseAni();
+                this.$refs.beautyPage13.runAni();
+                this.$refs.beautyPage14.pauseAni();
+            } else if (pageindex == 14) {
+                this.$refs.beautyPage13.pauseAni();
+                this.$refs.beautyPage14.runAni();
+                this.$refs.beautyPage15.pauseAni();
+            } else if (pageindex == 15) {
+                this.$refs.beautyPage14.pauseAni();
+                this.$refs.beautyPage15.runAni();
             }
         }
     }
@@ -138,4 +271,5 @@ export default {
     width: 100%;
     height: 100%;
 }
+
 </style>
