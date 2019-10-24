@@ -11,8 +11,12 @@ const wxApi = {
      * @param  {Function} callback [ready回调函数]
      */
     wxRegister(callback) {
-        // 这边的接口请换成你们自己的
-        Axios.get('https://api.sonicers.com/release/get_signature').then((res) => {
+
+        Axios.get('https://api.sonicers.com/release/get_signature', {
+            params: {
+                reqUrl: window.location.href
+            }
+        }).then((res) => {
             console.log("res=========", res)
             let data = res.data
             console.log("data==========", data)
