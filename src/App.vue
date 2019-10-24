@@ -20,8 +20,6 @@
     import Scroll from './components/Scroll.vue'
     import CSlider from './components/CSlider.vue'
     import wxapi from '../src/sns/wxapi.js'
-    import Axios from 'axios'
-    import wx from 'weixin-js-sdk'
 
     export default {
         name: 'app',
@@ -29,28 +27,7 @@
             if ('development' === process.env.NODE_ENV.toString()) {
                 new this.$vconsole();
             }
-            // wxapi.wxRegister(this.wxRegCallback);
-
-            let instance = Axios.create({
-                timeout: 5000,
-                // withCredentials: true,
-                rejectUnauthorized: false
-            });
-            // instance.get('http://cloud1.rustfisher.com/release/helloworld').then((res) => {
-            //     console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
-            //     // console.log(res);
-            //     // let data = JSON.parse(res.data);
-            //     // console.log(data);
-            //     // console.log(data.respond)
-            // });
-
-            Axios.get('http://api.coindesk.com/v1/bpi/currentprice.json').then((res) => {
-                console.log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
-            });
-
-            Axios.get('http://cloud1.rustfisher.com/release/helloworld').then((res) => {
-                console.log("aaaaaadfsadfabaaadfsdfafadfsdfdaaaaaaaaaaa")
-            });
+            wxapi.wxRegister(this.wxRegCallback);
         },
         methods: {
             wxRegCallback() {

@@ -3,6 +3,7 @@
  * 参考文档：https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115
  */
 import wx from 'weixin-js-sdk'
+import Axios from 'axios'
 
 const wxApi = {
     /**
@@ -10,51 +11,64 @@ const wxApi = {
      * @param  {Function} callback [ready回调函数]
      */
     wxRegister(callback) {
-        wx.config({
-            debug: true,
-            appId: 'wxf8b4f85f3a794e77',
-            timestamp: 1571195817,
-            nonceStr: 'ZohqKoS8QHP1jSWb',
-            signature: '4dab03b3dcc0a275f0c46a898d6793a1e38b0833',
-            jsApiList: [
-                'checkJsApi',
-                'onMenuShareTimeline',
-                'onMenuShareAppMessage',
-                'onMenuShareQQ',
-                'onMenuShareWeibo',
-                'onMenuShareQZone',
-                'hideMenuItems',
-                'showMenuItems',
-                'hideAllNonBaseMenuItem',
-                'showAllNonBaseMenuItem',
-                'translateVoice',
-                'startRecord',
-                'stopRecord',
-                'onVoiceRecordEnd',
-                'playVoice',
-                'onVoicePlayEnd',
-                'pauseVoice',
-                'stopVoice',
-                'uploadVoice',
-                'downloadVoice',
-                'chooseImage',
-                'previewImage',
-                'uploadImage',
-                'downloadImage',
-                'getNetworkType',
-                'openLocation',
-                'getLocation',
-                'hideOptionMenu',
-                'showOptionMenu',
-                'closeWindow',
-                'scanQRCode',
-                'chooseWXPay',
-                'openProductSpecificView',
-                'addCard',
-                'chooseCard',
-                'openCard'
-            ]
+        Axios.get('http://api.sonicers.com/release/helloworld').then((res) => {
+            console.log("aaaaaadfsadfabaaadfsdfafadfsdfdaaaaaaaaaaa")
         });
+        // 这边的接口请换成你们自己的
+        Axios.get('https://api.sonicers.com/release/get_signature').then((res) => {
+            console.log("res=========", res)
+            let result = JSON.parse(res) // PS: 这里根据你接口的返回值来使用
+            console.log("result==========", result)
+            let data = result.data
+            console.log("data==========", result)
+            wx.config({
+                debug: true, // 开启调试模式
+                appId: 'wx605d5a3ea82dc3ef', // 必填，公众号的唯一标识
+                timestamp: data.timestamp, // 必填，生成签名的时间戳
+                nonceStr: data.nonceStr, // 必填，生成签名的随机串
+                signature: data.signature, // 必填，签名，见附录1
+                jsApiList: [
+                    'checkJsApi',
+                    'onMenuShareTimeline',
+                    'onMenuShareAppMessage',
+                    'onMenuShareQQ',
+                    'onMenuShareWeibo',
+                    'onMenuShareQZone',
+                    'hideMenuItems',
+                    'showMenuItems',
+                    'hideAllNonBaseMenuItem',
+                    'showAllNonBaseMenuItem',
+                    'translateVoice',
+                    'startRecord',
+                    'stopRecord',
+                    'onVoiceRecordEnd',
+                    'playVoice',
+                    'onVoicePlayEnd',
+                    'pauseVoice',
+                    'stopVoice',
+                    'uploadVoice',
+                    'downloadVoice',
+                    'chooseImage',
+                    'previewImage',
+                    'uploadImage',
+                    'downloadImage',
+                    'getNetworkType',
+                    'openLocation',
+                    'getLocation',
+                    'hideOptionMenu',
+                    'showOptionMenu',
+                    'closeWindow',
+                    'scanQRCode',
+                    'chooseWXPay',
+                    'openProductSpecificView',
+                    'addCard',
+                    'chooseCard',
+                    'openCard'
+                ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+            })
+        }).catch((error) => {
+            console.log(error)
+        })
         wx.ready((res) => {
             // 如果需要定制ready回调方法
             if (callback) {
