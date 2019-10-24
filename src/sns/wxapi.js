@@ -11,16 +11,14 @@ const wxApi = {
      * @param  {Function} callback [ready回调函数]
      */
     wxRegister(callback) {
-        Axios.get('http://api.sonicers.com/release/helloworld').then((res) => {
-            console.log("aaaaaadfsadfabaaadfsdfafadfsdfdaaaaaaaaaaa")
-        });
         // 这边的接口请换成你们自己的
         Axios.get('https://api.sonicers.com/release/get_signature').then((res) => {
             console.log("res=========", res)
-            let result = JSON.parse(res) // PS: 这里根据你接口的返回值来使用
-            console.log("result==========", result)
-            let data = result.data
-            console.log("data==========", result)
+            let data = res.data
+            console.log("data==========", data)
+            console.log("data.timestamp==========", data.timestamp)
+            console.log("data.nonceStr==========", data.nonceStr)
+            console.log("data.signature==========", data.signature)
             wx.config({
                 debug: true, // 开启调试模式
                 appId: 'wx605d5a3ea82dc3ef', // 必填，公众号的唯一标识
