@@ -20,12 +20,13 @@ const wxApi = {
             console.log("res=========", res)
             let data = res.data
             console.log("data==========", data)
+            console.log("data.appId==========", data.appId)
             console.log("data.timestamp==========", data.timestamp)
             console.log("data.nonceStr==========", data.nonceStr)
             console.log("data.signature==========", data.signature)
             wx.config({
-                debug: true, // 开启调试模式
-                appId: 'wx605d5a3ea82dc3ef', // 必填，公众号的唯一标识
+                debug: false, // 开启调试模式
+                appId: data.appId, // 必填，公众号的唯一标识
                 timestamp: data.timestamp, // 必填，生成签名的时间戳
                 nonceStr: data.nonceStr, // 必填，生成签名的随机串
                 signature: data.signature, // 必填，签名，见附录1
