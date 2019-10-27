@@ -102,7 +102,7 @@ const wxApi = {
     },
     /**
      * [ShareAppMessage 微信分享给朋友]
-     * @param {[type]} option [分享信息]
+     * @param {{imgUrl: string, success: success, link: string, title: string, error: error, desc: string}} option [分享信息]
      * @param {[type]} success [成功回调]
      * @param {[type]} error   [失败回调]
      */
@@ -113,6 +113,7 @@ const wxApi = {
             link: option.link, // 分享链接
             imgUrl: option.imgUrl, // 分享图标
             success() {
+                console.log("option.success()==========")
                 // 用户成功分享后执行的回调函数
                 option.success()
             },

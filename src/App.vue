@@ -38,8 +38,8 @@
             wxShareTimeline() {
                 // 微信自定义分享到朋友圈
                 let option = {
-                    title: '限时团购周 挑战最低价', // 分享标题, 请自行替换
-                    link: 'https://movie.douban.com/subject/25785114/', // 分享链接，根据自身项目决定是否需要split
+                    title: 'Maka汉堡快餐店', // 分享标题, 请自行替换
+                    link: 'https://uss.sonicers.com/h5/index.html', // 分享链接，根据自身项目决定是否需要split
                     imgUrl: 'http://demo.open.weixin.qq.com/jssdk/images/p2166127561.jpg', // 分享图标, 请自行替换，需要绝对路径
                     success: () => {
                         alert('分享成功')
@@ -53,10 +53,10 @@
             },
             wxShareAppMessage() {
                 // 微信自定义分享给朋友
-                let option = {
-                    title: '限时团购周 挑战最低价', // 分享标题, 请自行替换
+                const option = {
+                    title: 'Maka汉堡快餐店', // 分享标题, 请自行替换
                     desc: '限时团购周 挑战最低价', // 分享描述, 请自行替换
-                    link: 'https://movie.douban.com/subject/25785114/', // 分享链接，根据自身项目决定是否需要split
+                    link: 'https://uss.sonicers.com/h5/index.html', // 分享链接，根据自身项目决定是否需要split
                     imgUrl: 'http://demo.open.weixin.qq.com/jssdk/images/p2166127561.jpg', // 分享图标, 请自行替换，需要绝对路径
                     success: () => {
                         alert('分享成功')
