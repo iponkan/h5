@@ -1,11 +1,6 @@
 <template>
     <div id="app">
-        <!--        <img alt="Vue logo" src="./assets/logo.png">-->
-        <!--        <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-        <Scroll style="width:100%;height:100%;">
-            <CSlider style="width:100%;height:100%"/>
-        </Scroll>
-
+        <page1 style="width: 100%; height: 100%"></page1>
         <audio
                 id="audio"
                 src="https://m7.music.126.net/20190904154408/f442f39b5e7e408351d7a0427bd97fc6/ymusic/0152/055a/5308/681ef6f50f20971ac5bddb07161fc6b5.mp3"
@@ -16,10 +11,8 @@
 </template>
 
 <script>
-    // import HelloWorld from './components/HelloWorld.vue'
-    import Scroll from './components/Scroll.vue'
-    import CSlider from './components/CSlider.vue'
     import wxapi from '../src/sns/wxapi.js'
+    import page1 from '../src/components/Page1'
 
     export default {
         name: 'app',
@@ -70,9 +63,8 @@
             }
         },
         components: {
-            Scroll,
-            CSlider,
-            wxapi
+            wxapi,
+            page1
         }
 
     };

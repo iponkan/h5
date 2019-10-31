@@ -1,19 +1,22 @@
+// 云存储服务名绑定的域名
+const domain = 'https://uss.sonicers.com';
+// 云存储服务名
+const server = 'static-sonicers';
+//上传到服务器的文件夹路径
+const pathInServer = '/base';
+
+
 const UpyunUpload = require('anve-upload-upyun');
 const path = require('path');
 const fs = require('fs');
 const configFilePath = './upyun.config.js';
-let domain;
-let server;
-let pathInServer;
+
 let name;
 let passwd;
 
 const configExist = fs.existsSync(configFilePath);
 if (configExist) {
     const config = require(configFilePath);
-    domain = config.domain;
-    server = config.server;
-    pathInServer = config.pathInServer;
     name = config.name;
     passwd = config.passwd;
     console.log("domain:" + config.domain);
