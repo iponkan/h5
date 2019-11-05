@@ -16,8 +16,8 @@
                 preload: "auto",
                 options: {
                     video: {
-                        url: 'https://v-cdn.zjol.com.cn/279761.mp4?userId=44ee8296-cff7-4580-a6de-6c4e8285995f',
-                        pic: 'https://v-img.zjol.com.cn/279757.jpg'
+                        url: 'https://1251413404.vod2.myqcloud.com/vodtransgzp1251413404/7447398155988700674/v.f13477.mp4',
+                        pic: ''
                     },
                     autoplay: false
                 },
