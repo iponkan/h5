@@ -91,6 +91,10 @@
                 <BeautyPage19 class="page" ref="beautyPage19"></BeautyPage19>
             </slideritem>
 
+            <slideritem>
+                <BeautyPage20 class="page" ref="beautyPage20"></BeautyPage20>
+            </slideritem>
+
            
 
             <!-- Customizable loading -->
@@ -125,6 +129,7 @@ import BeautyPage16 from "./pages/BeautyPage16.vue";
 import BeautyPage17 from "./pages/BeautyPage17.vue";
 import BeautyPage18 from "./pages/BeautyPage18.vue";
 import BeautyPage19 from "./pages/BeautyPage19.vue";
+import BeautyPage20 from "./pages/BeautyPage20.vue";
 import Page1 from "./Page1.vue";
 // import Page2 from "./Page2.vue";
 // import Page3 from "./Page3.vue";
@@ -175,6 +180,7 @@ export default {
         BeautyPage17,
         BeautyPage18,
         BeautyPage19,
+        BeautyPage20,
         Page1,
     },
     mounted: {
@@ -241,6 +247,10 @@ export default {
             } else if(pageindex == 4){
                 this.$refs.beautyPage18.pauseAni();
                 this.$refs.beautyPage19.runAni();
+                this.$refs.beautyPage20.pauseAni();
+            } else if(pageindex == 5){
+                this.$refs.beautyPage19.pauseAni();
+                this.$refs.beautyPage20.runAni();
             }
             // if (pageindex == 0) {
             //     this.$refs.page1.runAni();

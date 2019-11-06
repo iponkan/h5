@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div id="div1Id">
+    <div style="background-color: rgb(255, 255, 255);">
+        <div v-bind:class="anirun ? 'showUi' : 'hideUi'" id="div1Id">
             <div id="div2Id">
                 <div
                     class="animated"

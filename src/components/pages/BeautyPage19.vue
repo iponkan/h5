@@ -66,12 +66,12 @@ export default {
     methods: {
         runAni: function() {
             this.anirun = true;
-            this.player.play();
+            // this.player.play();
             console.log("runAni =========== ");
         },
         pauseAni: function() {
             this.anirun = false;
-            this.player.pause();
+            // this.player.pause();
             console.log("pauseAni =========== ");
         },
         play() {
