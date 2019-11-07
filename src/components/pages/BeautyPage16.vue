@@ -375,7 +375,6 @@ export default {
 #div0Id {
     z-index: 999;
     display: block;
-    opacity: 1;
 }
 #div1Id {
     position: absolute;
@@ -390,6 +389,7 @@ export default {
     left: 0%;
     top: 0%;
     position: absolute;
+    transform: perspective(1000);
 }
 #div3Id {
     width: 100%;
@@ -552,6 +552,7 @@ export default {
     position: absolute;
     opacity: 1;
     cursor: pointer;
+    transform:perspective(1000);
 }
 #div18Id {
     position: absolute;

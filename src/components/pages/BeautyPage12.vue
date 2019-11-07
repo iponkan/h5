@@ -205,7 +205,7 @@ export default {
     height: 100%;
     overflow: hidden;
     border-radius: 0px;
-    background: url("../../assets/img17.webp") center 0 no-repeat;
+    background: url("../../assets/img17.png") center 0 no-repeat;
     background-size: auto 100%;
     display: block;
 }
@@ -265,7 +265,7 @@ export default {
     height: 100%;
     overflow: hidden;
     border-radius: 0px;
-    background: url("../../assets/img18.webp") center 0 no-repeat;
+    background: url("../../assets/img18.png") center 0 no-repeat;
     background-size: auto 100%;
     display: block;
 }

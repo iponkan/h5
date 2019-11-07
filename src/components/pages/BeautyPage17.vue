@@ -289,7 +289,7 @@ export default {
     overflow: hidden;
     border-radius: 0px;
     box-shadow: black 0px 0px 0px;
-    background-image: url("../../assets/img11.webp");
+    background-image: url("../../assets/img11.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: 0px 0px;
@@ -367,6 +367,7 @@ export default {
     height: 9.821424737366767%;
     top: 13.988099072157045%;
     left: 12.5%;
+    transform: perspective(1000);
 }
 #div22Id {
     position: absolute;
@@ -412,6 +413,7 @@ export default {
     left: 0.7812512077294685%;
     transform-origin: center center;
     opacity: 1;
+    transform: perspective(1000);
 }
 #div26Id {
     width: 100%;

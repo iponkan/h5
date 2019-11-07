@@ -159,7 +159,7 @@ export default {
     height: 100%;
     overflow: hidden;
     border-radius: 0px;
-    background: url("../../assets/img26.webp") center center no-repeat;    
+    background: url("../../assets/img26.png") center center no-repeat;    
     background-size: auto 100%;
     
     display: block;
@@ -178,7 +178,7 @@ export default {
     height: 100%;
     overflow: hidden;
     border-radius: 0px;
-    background-image: url("../../assets/img25.webp");
+    background-image: url("../../assets/img25.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: 0px 0px;
