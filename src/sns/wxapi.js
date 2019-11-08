@@ -3,7 +3,7 @@
  * 参考文档：https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115
  */
 import wx from 'weixin-js-sdk'
-import Axios from 'axios'
+import axios from 'axios'
 
 const wxApi = {
     /**
@@ -12,25 +12,25 @@ const wxApi = {
      */
     wxRegister(callback) {
 
-        Axios.get('https://api.sonicers.com/release/get_signature', {
+        axios.get('https://api.sonicers.com/release/get_signature', {
             params: {
                 reqUrl: window.location.href
             }
         }).then((res) => {
-            console.log("res=========", res)
-            let data = res.data
-            console.log("data==========", data)
-            console.log("data.appId==========", data.appId)
-            console.log("data.timestamp==========", data.timestamp)
-            console.log("data.nonceStr==========", data.nonceStr)
-            console.log("data.signature==========", data.signature)
+            console.log("res=========", res);
+            let data = res.data;
+            console.log("data==========", data);
+            console.log("data.appId==========", data.appId);
+            console.log("data.timestamp==========", data.timestamp);
+            console.log("data.nonceStr==========", data.nonceStr);
+            console.log("data.signature==========", data.signature);
             wx.config({
                 debug: false, // 开启调试模式
                 appId: data.appId, // 必填，公众号的唯一标识
                 timestamp: data.timestamp, // 必填，生成签名的时间戳
                 nonceStr: data.nonceStr, // 必填，生成签名的随机串
                 signature: data.signature, // 必填，签名，见附录1
-                jsApiList: [
+                jsApiList: [// 必填，需要使用的JS接口列表，所有JS接口列表见附录2
                     'checkJsApi',
                     'onMenuShareTimeline',
                     'onMenuShareAppMessage',
@@ -67,12 +67,12 @@ const wxApi = {
                     'addCard',
                     'chooseCard',
                     'openCard'
-                ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                ]
             })
         }).catch((error) => {
             console.log(error)
-        })
-        wx.ready((res) => {
+        });
+        wx.ready(() => {
             // 如果需要定制ready回调方法
             if (callback) {
                 callback()
@@ -81,9 +81,6 @@ const wxApi = {
     },
     /**
      * [ShareTimeline 微信分享到朋友圈]
-     * @param {[type]} option [分享信息]
-     * @param {[type]} success [成功回调]
-     * @param {[type]} error   [失败回调]
      */
     ShareTimeline(option) {
         wx.onMenuShareTimeline({
@@ -102,9 +99,6 @@ const wxApi = {
     },
     /**
      * [ShareAppMessage 微信分享给朋友]
-     * @param {{imgUrl: string, success: success, link: string, title: string, error: error, desc: string}} option [分享信息]
-     * @param {[type]} success [成功回调]
-     * @param {[type]} error   [失败回调]
      */
     ShareAppMessage(option) {
         wx.onMenuShareAppMessage({
@@ -113,7 +107,6 @@ const wxApi = {
             link: option.link, // 分享链接
             imgUrl: option.imgUrl, // 分享图标
             success() {
-                console.log("option.success()==========")
                 // 用户成功分享后执行的回调函数
                 option.success()
             },

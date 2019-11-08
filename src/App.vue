@@ -1,7 +1,5 @@
 <template>
     <div id="app">
-        <!--        <img alt="Vue logo" src="./assets/logo.png">-->
-        <!--        <HelloWorld msg="Welcome to Your Vue.js App"/>-->
         <Scroll style="width:100%;height:100%;">
             <CSlider style="width:100%;height:100%"/>
         </Scroll>
@@ -10,16 +8,27 @@
                 id="audio"
                 src="https://m7.music.126.net/20190904154408/f442f39b5e7e408351d7a0427bd97fc6/ymusic/0152/055a/5308/681ef6f50f20971ac5bddb07161fc6b5.mp3"
                 loop="loop"
-                autoplay="true"
+                autoplay="autoplay"
         ></audio>
     </div>
 </template>
 
 <script>
-    // import HelloWorld from './components/HelloWorld.vue'
     import Scroll from './components/Scroll.vue'
     import CSlider from './components/CSlider.vue'
     import wxapi from '../src/sns/wxapi.js'
+
+    const shareData = {
+        url: "https://uss.sonicers.com/guimanlong/index.html",
+        picUrl: "https://uss.sonicers.com/guimanlong/weixin.jpg",
+        title: '桂满陇,与美食的奇遇～',
+        desc: '限时团购周 挑战最低价！你还在等什么～',
+        timelineTitle: '桂满陇,与美食的奇遇～',
+
+        callback: function () {
+            console.log('分享成功')
+        }
+    };
 
     export default {
         name: 'app',
@@ -32,40 +41,38 @@
         methods: {
             wxRegCallback() {
                 // 用于微信JS-SDK回调
-                this.wxShareTimeline()
+                this.wxShareTimeline();
                 this.wxShareAppMessage()
             },
             wxShareTimeline() {
                 // 微信自定义分享到朋友圈
                 let option = {
-                    title: '桂满陇', // 分享标题, 请自行替换
-                    link: 'https://uss.sonicers.com/guimanlong/index.html', // 分享链接，根据自身项目决定是否需要split
-                    imgUrl: 'https://uss.sonicers.com/guimanlong/weixin.jpg', // 分享图标, 请自行替换，需要绝对路径
+                    title: shareData.title,
+                    link: shareData.url,
+                    imgUrl: shareData.picUrl,
                     success: () => {
-                        alert('分享成功')
+                        shareData.callback()
                     },
                     error: () => {
-                        alert('已取消分享')
+
                     }
                 };
-                // 将配置注入通用方法
                 wxapi.ShareTimeline(option)
             },
             wxShareAppMessage() {
                 // 微信自定义分享给朋友
                 const option = {
-                    title: '桂满陇', // 分享标题, 请自行替换
-                    desc: '限时团购周 挑战最低价', // 分享描述, 请自行替换
-                    link: 'https://uss.sonicers.com/guimanlong/index.html', // 分享链接，根据自身项目决定是否需要split
-                    imgUrl: 'https://uss.sonicers.com/guimanlong/weixin.jpg', // 分享图标, 请自行替换，需要绝对路径
+                    title: shareData.timelineTitle,
+                    desc: shareData.desc,
+                    link: shareData.url,
+                    imgUrl: shareData.picUrl,
                     success: () => {
-                        alert('分享成功')
+                        shareData.callback()
                     },
                     error: () => {
-                        alert('已取消分享')
+
                     }
                 };
-                // 将配置注入通用方法
                 wxapi.ShareAppMessage(option)
             }
         },
