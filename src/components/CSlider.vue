@@ -95,7 +95,7 @@
                 <BeautyPage20 class="page" ref="beautyPage20"></BeautyPage20>
             </slideritem>
 
-           
+
 
             <!-- Customizable loading -->
             <div slot="loading">loading...</div>
@@ -130,7 +130,6 @@ import BeautyPage17 from "./pages/BeautyPage17.vue";
 import BeautyPage18 from "./pages/BeautyPage18.vue";
 import BeautyPage19 from "./pages/BeautyPage19.vue";
 import BeautyPage20 from "./pages/BeautyPage20.vue";
-import Page1 from "./Page1.vue";
 // import Page2 from "./Page2.vue";
 // import Page3 from "./Page3.vue";
 // import Page4 from "./Page4.vue";
@@ -181,7 +180,6 @@ export default {
         BeautyPage18,
         BeautyPage19,
         BeautyPage20,
-        Page1,
     },
     mounted: {
         mount: function() {
