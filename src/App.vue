@@ -1,8 +1,6 @@
 <template>
     <div id="app">
-        <Scroll style="width:100%;height:100%;">
-            <CSlider style="width:100%;height:100%"/>
-        </Scroll>
+        <CSlider style="width:100%;height:100%"/>
 
         <audio
                 id="audio"
@@ -14,7 +12,6 @@
 </template>
 
 <script>
-    import Scroll from './components/Scroll.vue'
     import CSlider from './components/CSlider.vue'
     import wxapi from '../src/sns/wxapi.js'
 
@@ -77,7 +74,6 @@
             }
         },
         components: {
-            Scroll,
             CSlider,
             wxapi
         }
