@@ -23,6 +23,10 @@
                 margin-top: .4em;
             }
 
+            .progress-str {
+                color: white;
+            }
+
             .loadingAnimation {
                 width: 60px;
                 height: 60px;
