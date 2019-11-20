@@ -6,7 +6,7 @@
             </preload-image>
         </section>
 
-        <section id="content" style="width:100%;height:100%">
+        <section id="content" style="width:100%;height:100%" hidden>
             <CSlider style="width:100%;height:100%"/>
         </section>
         <audio
@@ -117,6 +117,7 @@
             fn() {
                 this.preLoaded = true;
                 document.getElementById('loading').remove()
+                document.getElementById('content').hidden = false
             }
         },
         components: {
