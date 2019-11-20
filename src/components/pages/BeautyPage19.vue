@@ -9,6 +9,7 @@
                 >
                     <d-player
                             @play="play"
+                            @pause="pause"
                             :options="options"
                             class="page1_palyer"
                             ref="player"
@@ -49,6 +50,9 @@
     import "../../style/dplayer-style.css";
 
     export default {
+        mounted() {
+            this.player = this.$refs.player.dp
+        },
         data() {
             return {
                 anirun: false,
@@ -60,26 +64,28 @@
                     },
                     autoplay: false
                 },
-                player: null
+                player: null,
             };
         },
         methods: {
             runAni: function () {
                 this.anirun = true;
-                // this.player.play();
+                setTimeout(() => {
+                    this.player.play();
+                }, 1000)
                 console.log("runAni =========== ");
             },
             pauseAni: function () {
                 this.anirun = false;
-                // this.player.pause();
+                this.player.pause();
                 console.log("pauseAni =========== ");
             },
             play() {
                 console.log("play callback");
             },
-
-            switchHandle() {
-                this.player.pause();
+            pause() {
+                // 需要判断是否是手动暂停
+                console.log("play callback");
             }
         },
 
