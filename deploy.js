@@ -3,7 +3,7 @@ const domain = 'https://uss.sonicers.com';
 // 云存储服务名
 const server = 'static-sonicers';
 //上传到服务器的文件夹路径
-const pathInServer = '/guimanlong';
+const pathInServer = '/zhiaibaobao';
 
 
 const UpyunUpload = require('anve-upload-upyun');
@@ -21,7 +21,6 @@ if (configExist) {
     passwd = config.passwd;
     console.log("domain:" + config.domain);
     console.log("server:" + config.server);
-    console.log("pathInServer:" + config.pathInServer);
     console.log("name:" + config.name);
     console.log("passwd:" + config.passwd);
 }
