@@ -1,8 +1,8 @@
 <template>
     <div id="app">
-        <section id="loading" style="width:100%;height:100%;background: black">
+        <section id="loading" style="width:100%;height:100%;background: #1991EC">
             <preload-image :imgUrlArr="imgUrls" @imgAllLoaded="fn" :animationShow="false">
-                <img src="../src/assets/loading.gif"/>
+                <img style="width: 20vh; height: 20vh" src="../src/assets/loading.gif"/>
             </preload-image>
         </section>
 
@@ -23,8 +23,10 @@
     import wxapi from '../src/sns/wxapi.js'
     import preloadImage from './components/util/vue-preload-image.vue'
 
+    const baseLink = window.location.href.replace(/%26/g, '&')
+
     const shareData = {
-        url: "https://uss.sonicers.com/zhiaibaobao/index.html",
+        url: baseLink,
         picUrl: "https://uss.sonicers.com/zhiaibaobao/cover.jpg",
         title: '智爱宝贝，时尚塑造美～',
         desc: '产后恢复这样做，哪里像是生过娃～',

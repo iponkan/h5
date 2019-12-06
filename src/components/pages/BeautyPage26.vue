@@ -167,7 +167,7 @@
                         url:
                             "https://uss.sonicers.com/video/xc.mp4",
                         pic:
-                            "https://uss.sonicers.com/zhiaibaobao/img/xc.jpg"
+                            "https://uss.sonicers.com/video/xc.jpg"
                     },
                     autoplay: false
                 },

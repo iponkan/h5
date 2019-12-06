@@ -18,12 +18,13 @@
             }
 
             .tip-str {
-                size: 5px;
+                font-size: 25px;
                 color: white;
                 margin-top: .4em;
             }
 
             .progress-str {
+                font-size: 25px;
                 color: white;
             }
 
