@@ -42,12 +42,7 @@
 <script>
     // import slider components
     import {slider, slideritem} from "vue-concise-slider";
-    import BeautyPage12 from "./pages/BeautyPage12.vue";
-    import BeautyPage16 from "./pages/BeautyPage16.vue";
-    import BeautyPage17 from "./pages/BeautyPage17.vue";
-    import BeautyPage18 from "./pages/BeautyPage18.vue";
-    import BeautyPage19 from "./pages/BeautyPage19.vue";
-    import BeautyPage20 from "./pages/BeautyPage20.vue";
+    
     import BeautyPage21 from "./pages/BeautyPage21.vue";
     import BeautyPage22 from "./pages/BeautyPage22.vue";
     import BeautyPage23 from "./pages/BeautyPage23.vue";

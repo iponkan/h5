@@ -533,7 +533,7 @@ export default {
     position: absolute;
     width: 93.75%;
     height: 5.629546827794562%;
-    top: 15.69259818731118%;
+    top: 16%;
     left: 3.125%;
     transform-origin: center center;
     opacity: 1;

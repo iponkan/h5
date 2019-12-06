@@ -24,8 +24,8 @@
     import preloadImage from './components/util/vue-preload-image.vue'
 
     const shareData = {
-        url: "https://uss.sonicers.com/guimanlong/index.html",
-        picUrl: "https://uss.sonicers.com/guimanlong/weixin.jpg",
+        url: "https://uss.sonicers.com/zhiaibaobao/index.html",
+        picUrl: "https://uss.sonicers.com/zhiaibaobao/cover.jpg",
         title: '智爱宝贝，时尚塑造美～',
         desc: '产后恢复这样做，哪里像是生过娃～',
         timelineTitle: '智爱宝贝，时尚塑造美～',

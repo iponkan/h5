@@ -592,17 +592,6 @@
         opacity: 1;
     }
 
-    #div5Id {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        border-radius: 0px;
-        background: url("../../assets/img26.png") center center no-repeat;
-        background-size: auto 100%;
-
-        display: block;
-    }
 
     #div6Id {
         width: 30%;
@@ -613,18 +602,6 @@
         opacity: 1;
     }
 
-    #div7Id {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        border-radius: 0px;
-        background-image: url("../../assets/img25.png");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        background-position: 0px 0px;
-        display: block;
-    }
 
     #div8Id {
         width: 30%;
@@ -656,14 +633,4 @@
         opacity: 1;
     }
 
-    #div15Id {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        border-radius: 0px;
-        background: url("../../assets/img27.jpg") 0 center no-repeat;
-        background-size: 100% auto;
-        display: block;
-    }
 </style>
