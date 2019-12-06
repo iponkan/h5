@@ -57,7 +57,7 @@
                     <div id="div10Id">
                         <div v-bind:class="anirun ? 'div5' : null" id="div11Id">
                             <div>
-                                <p>推荐美食</p>
+                                <p>效果见证</p>
                             </div>
                         </div>
                     </div>

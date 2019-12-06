@@ -177,9 +177,9 @@
         methods: {
             runAni: function () {
                 this.anirun = true;
-                setTimeout(() => {
-                    this.player.play();
-                }, 1000);
+                // setTimeout(() => {
+                //     this.player.play();
+                // }, 1000);
                 console.log("runAni =========== ");
             },
             pauseAni: function () {
