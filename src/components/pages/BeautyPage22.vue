@@ -2,7 +2,7 @@
     <div
         style="background-color: rgb(255, 255, 255); width:100%;height:100%; overflow: hidden;"
     >
-        <div class="maka-page maka-page-1" id="Commondiv0Id">
+        <div v-bind:class="anirun ? 'showUi' : 'hideUi'" id="Commondiv0Id">
             <div class="page-bg-1" id="Commondiv1Id"></div>
             <div class="maka-eleCanvas maka-eleCanvas-1" id="Commondiv2Id">
                 <div id="Commondiv3Id">
@@ -18,47 +18,7 @@
                     </div>
                 </div>
 
-                <div
-                    style="width: 87.7452380952381%;height: 93.71480362537766%;left: 6.093761904761905%;top: 3.207583081570997%;display: block;position: absolute;"
-                >
-                    <div style="position: absolute;width:100%;height:20%">
-                        <div
-                            style="width:100%;height:100%; position: absolute;display:block;"
-                            v-bind:class="anirun ? 'div0Ani' : null"
-                        >
-                            <span
-                                style="width:100%;height:100%; position: absolute;color:black;display:block;top:20%;text-shadow:0px 0px 5px #333333;"
-                                >欢迎您的到来</span
-                            >
-                        </div>
-                    </div>
-
-                    <div
-                        style="width:70%;height:50%;position: absolute; left:15%;top:20%"
-                    >
-                        <div>
-                            <img
-                                style="width:100%;height:100%;position: absolute; display: block;object-fit:cover;"
-                                src="../../assets/page26_1.jpg"
-                                v-bind:class="anirun ? 'div1Ani' : null"
-                            />
-                        </div>
-                    </div>
-
-                    <div
-                        style="position: absolute;width:100%;height:20%;bottom:0%"
-                    >
-                        <div
-                            style="width:100%;height:100%; position: absolute;display:block;"
-                            v-bind:class="anirun ? 'div2Ani' : null"
-                        >
-                            <span
-                                style="width:100%;height:100%; position: absolute;color:black;display:block;bottom:20%;text-shadow:0px 0px 5px #333333;font-size:18px"
-                                >地址：海口市友谊广场</span
-                            >
-                        </div>
-                    </div>
-                </div>
+                
 
                 <div id="Commondiv5Id">
                     <div
@@ -166,6 +126,47 @@
                             src="http://img1.maka.im/user/6910480/images/26c8ce9ff59e06d8537ef833abae64a4.png@0-0-106-56a_80Q.src"
                             style="opacity: 0;"
                         />
+                    </div>
+                </div>
+                <div
+                    style="width: 87.7452380952381%;height: 93.71480362537766%;left: 6.093761904761905%;top: 3.207583081570997%;display: block;position: absolute;"
+                >
+                    <div style="position: absolute;width:100%;height:20%">
+                        <div
+                            style="width:100%;height:100%; position: absolute;display:block;"
+                            v-bind:class="anirun ? 'div0Ani' : null"
+                        >
+                            <span
+                                style="width:100%;height:100%; position: absolute;color:black;display:block;top:20%;text-shadow:0px 0px 5px #333333;"
+                                >欢迎您的到来</span
+                            >
+                        </div>
+                    </div>
+
+                    <div
+                        style="width:70%;height:50%;position: absolute; left:15%;top:20%"
+                    >
+                        <div>
+                            <img
+                                style="width:100%;height:100%;position: absolute; display: block;object-fit:cover;"
+                                src="../../assets/page26_1.jpg"
+                                v-bind:class="anirun ? 'div1Ani' : null"
+                            />
+                        </div>
+                    </div>
+
+                    <div
+                        style="position: absolute;width:100%;height:20%;bottom:0%"
+                    >
+                        <div
+                            style="width:100%;height:100%; position: absolute;display:block;"
+                            v-bind:class="anirun ? 'div2Ani' : null"
+                        >
+                            <span
+                                style="width:100%;height:100%; position: absolute;color:black;display:block;bottom:20%;text-shadow:0px 0px 5px #333333;font-size:18px"
+                                >地址：海口市友谊广场</span
+                            >
+                        </div>
                     </div>
                 </div>
             </div>

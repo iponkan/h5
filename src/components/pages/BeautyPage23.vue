@@ -2,7 +2,7 @@
     <div
         style="background-color: rgb(255, 255, 255); width:100%;height:100%; overflow: hidden;"
     >
-        <div class="maka-page maka-page-1" id="div0Id">
+        <div v-bind:class="anirun ? 'showUi' : 'hideUi'" id="div0Id">
             <div class="page-bg-1" id="div1Id"></div>
             <div class="maka-eleCanvas maka-eleCanvas-1" id="div2Id">
                 <div id="div3Id">

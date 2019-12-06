@@ -1,6 +1,6 @@
 <template>
     <div style="background-color: rgb(255, 255, 255); width:100%;height:100%; overflow: hidden;">
-        <div class="maka-page maka-page-0" id="div0Id">
+        <div v-bind:class="anirun ? 'showUi' : 'hideUi'" id="div0Id">
             <div class="page-bg-0" id="div1Id"></div>
             <div class="maka-eleCanvas maka-eleCanvas-0" id="div2Id">
                 <div id="div3Id">
@@ -397,23 +397,23 @@ export default {
 #div27Id{width: 29.9%; height: 10.200755287009063%; left: 3.268047619047619%; top: 91.1702416918429%; position: absolute; opacity: 1;  cursor: pointer;}
 #div28Id{position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url("http://img1.maka.im/user/6910480/images/26c8ce9ff59e06d8537ef833abae64a4.png@0-0-106-56a_80Q.src"); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; display: block; }
 #div29Id{position: absolute; width: 93.75%; height: 7.089063444108762%; top: 68.47416918429002%; left: 3.125%;  transform-origin: center center; opacity: 1;}
-#div30Id{width: 100%; height: 100%; color: rgb(250, 3, 18); text-align: center; font-weight: normal; text-decoration: none; line-height: 1.8; font-style: normal; overflow-wrap: break-word; white-space: pre-wrap; font-size: 0.40191683rem; letter-spacing: 0.0rem; display: block; }
+#div30Id{width: 100%; height: 100%; color: rgb(0, 0, 0); text-align: center; font-weight: normal; text-decoration: none; line-height: 1.8; font-style: normal; overflow-wrap: break-word; white-space: pre-wrap; font-size: 0.40191683rem; letter-spacing: 0.0rem; display: block; }
 #div31Id{width: 58.01238095238095%; height: 36.16374622356495%; left: 20.9375%; top: 30.96691842900302%; position: absolute; opacity: 1;  cursor: pointer;}
 #div32Id{position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 119.702px; box-shadow: black 0px 0px 0px; background-image: url("http://img1.maka.im/user/6910480/images/e3d372512e1abef48e8308faeb0b20b4.jpg@57-5-244-239a_80Q.src"); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; display: block; }
 #div33Id{width: 58.63142857142858%; height: 36.698036253776436%; left: 20.625%; top: 30.18610271903323%; position: absolute; opacity: 1;  cursor: pointer;}
 #div34Id{position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url("http://img1.maka.im/user/6910480/images/6674e08e231ef7c78dc56d7aea4c71ca.png@0-1-215-212a_80Q.src"); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; display: block; }
 #div35Id{position: absolute; width: 37.18642857142857%; height: 4.163519637462235%; top: 25.998036253776434%; left: 31.406190476190478%;  transform-origin: center center; opacity: 1;}
-#div36Id{width: 100%; height: 100%; color: rgb(250, 6, 36); text-align: center; font-weight: normal; text-decoration: none; line-height: 1.8; font-style: normal; overflow-wrap: break-word; white-space: pre-wrap; font-size: 0.23187509rem; letter-spacing: 0.0rem; display: block; }
+#div36Id{width: 100%; height: 100%; color: rgb(0, 0, 0); text-align: center; font-weight: normal; text-decoration: none; line-height: 1.8; font-style: normal; overflow-wrap: break-word; white-space: pre-wrap; font-size: 0.23187509rem; letter-spacing: 0.0rem; display: block; }
 #div37Id{position: absolute; width: 16.476190476190478%; height: 0.19947280966767372%; top: 28.024471299093655%; left: 16.581309523809523%; }
 #div38Id{position: absolute; width: 16.476190476190478%; height: 0.19947280966767372%; display: block; }
 #div39Id{position: absolute; width: 16.476190476190478%; height: 0.19947280966767372%; top: 27.966767371601208%; left: 68.10261904761904%; }
 #div40Id{position: absolute; width: 16.476190476190478%; height: 0.19947280966767372%; display: block; }
 #div41Id{position: absolute; width: 84.52619047619048%; height: 4.795543806646526%; top: 74.34350453172205%; left: 10.285357142857144%;  transform-origin: center center; opacity: 1;}
-#div42Id{width: 100%; height: 100%; color: rgb(250, 6, 36); text-align: center; font-weight: normal; text-decoration: none; line-height: 1.8; font-style: normal; overflow-wrap: break-word; white-space: pre-wrap; font-size: 0.2782501rem; letter-spacing: 0.0rem; display: block; }
+#div42Id{width: 100%; height: 100%; color: rgb(0, 0, 0); text-align: center; font-weight: normal; text-decoration: none; line-height: 1.8; font-style: normal; overflow-wrap: break-word; white-space: pre-wrap; font-size: 0.2782501rem; letter-spacing: 0.0rem; display: block; }
 #div43Id{width: 5.140928571428571%; height: 3.2616163141993955%; left: 22.78754761904762%; top: 80.00694864048337%; position: absolute; opacity: 1;  cursor: pointer;}
 #div44Id{position: absolute; width: 100%; height: 100%; overflow: hidden; border-radius: 0px; box-shadow: black 0px 0px 0px; background-image: url("http://img1.maka.im/user/6910480/images/e680ee2c392c48faef5b6e86942f1bad.png@0-0-16-16a_80Q.src"); background-repeat: no-repeat; background-size: 100% 100%; background-position: 0px 0px; display: block; }
 #div45Id{position: absolute; width: 84.52619047619048%; height: 4.795543806646526%; top: 79.20090634441087%; left: 31.243333333333332%;  transform-origin: center center; opacity: 1;}
-#div46Id{width: 100%; height: 100%; color: rgb(250, 6, 36); text-align: left; font-weight: normal; text-decoration: none; line-height: 1.8; font-style: normal; overflow-wrap: break-word; white-space: pre-wrap; font-size: 0.2782501rem; letter-spacing: 0.0rem; display: block; }
+#div46Id{width: 100%; height: 100%; color: rgb(0, 0, 0); text-align: left; font-weight: normal; text-decoration: none; line-height: 1.8; font-style: normal; overflow-wrap: break-word; white-space: pre-wrap; font-size: 0.2782501rem; letter-spacing: 0.0rem; display: block; }
 
 
 </style>
