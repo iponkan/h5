@@ -164,7 +164,7 @@
                         id="div30Id"
                         v-bind:class="anirun ? 'div13Ani' : null"
                     >
-                        <span>      成立于xxx,我们真诚为xx服务</span>
+                        <span>    亲爱的，等待不能变好，是因为你值得更好的，所以加入我们，一起见证你的美丽蜕变。</span>
                     </div>
                 </div>
                 <div id="div31Id">

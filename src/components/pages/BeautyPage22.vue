@@ -39,7 +39,7 @@
                         <div>
                             <img
                                 style="width:100%;height:100%;position: absolute; display: block;object-fit:cover;"
-                                src="../../assets/img28.png"
+                                src="../../assets/page26_1.jpg"
                                 v-bind:class="anirun ? 'div1Ani' : null"
                             />
                         </div>
