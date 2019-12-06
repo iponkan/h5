@@ -54,7 +54,7 @@
                         >
                             <span
                                 style="width:100%;height:100%; position: absolute;color:black;display:block;bottom:20%;text-shadow:0px 0px 5px #333333;font-size:18px"
-                                >地址：陆家嘴正大广场</span
+                                >地址：海口市友谊广场</span
                             >
                         </div>
                     </div>
