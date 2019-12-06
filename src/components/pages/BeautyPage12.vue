@@ -1,6 +1,6 @@
 <template>
-    <div style="background-color: rgb(255, 255, 255);">
-        <div v-bind:class="anirun ? 'showUi' : 'hideUi'">
+    <div style="background-color: rgb(255, 255, 255);overflow: hidden;">
+        <div v-bind:class="anirun ? 'showUi' : 'hideUi'" style="overflow: hidden;">
             <div id="div0Id">
                 <img
                     src="../../assets/img12.jpg"

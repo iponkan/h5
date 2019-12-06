@@ -11,42 +11,27 @@
         >
 
             <slideritem>
-                <BeautyPage16 class="page" ref="beautyPage16"></BeautyPage16>
-                <div class="arrow fadeOutUp" @click="slideNext">
-                    <img src="../assets/arrow.png" width="100%"/>
-                </div>
+                <BeautyPage21 class="page" ref="beautyPage21"></BeautyPage21>
             </slideritem>
 
             <slideritem>
-                <BeautyPage17 class="page" ref="beautyPage17"></BeautyPage17>
-                <div class="arrow fadeOutUp" @click="slideNext">
-                    <img src="../assets/arrow.png" width="100%"/>
-                </div>
+                <BeautyPage23 class="page" ref="beautyPage23"></BeautyPage23>
             </slideritem>
 
             <slideritem>
-                <BeautyPage12 class="page" ref="beautyPage12"></BeautyPage12>
-                <div class="arrow fadeOutUp" @click="slideNext">
-                    <img src="../assets/arrow.png" width="100%"/>
-                </div>
+                <BeautyPage24 class="page" ref="beautyPage24"></BeautyPage24>
             </slideritem>
 
             <slideritem>
-                <BeautyPage18 class="page" ref="beautyPage18"></BeautyPage18>
-                <div class="arrow fadeOutUp" @click="slideNext">
-                    <img src="../assets/arrow.png" width="100%"/>
-                </div>
+                <BeautyPage25 class="page" ref="beautyPage25"></BeautyPage25>
             </slideritem>
 
             <slideritem>
-                <BeautyPage19 class="page" ref="beautyPage19"></BeautyPage19>
-                <div class="arrow fadeOutUp" @click="slideNext">
-                    <img src="../assets/arrow.png" width="100%"/>
-                </div>
+                <BeautyPage26 class="page" ref="beautyPage26"></BeautyPage26>
             </slideritem>
 
             <slideritem>
-                <BeautyPage20 class="page" ref="beautyPage20"></BeautyPage20>
+                <BeautyPage22 class="page" ref="beautyPage22"></BeautyPage22>
             </slideritem>
 
         </slider>
@@ -63,6 +48,14 @@
     import BeautyPage18 from "./pages/BeautyPage18.vue";
     import BeautyPage19 from "./pages/BeautyPage19.vue";
     import BeautyPage20 from "./pages/BeautyPage20.vue";
+    import BeautyPage21 from "./pages/BeautyPage21.vue";
+    import BeautyPage22 from "./pages/BeautyPage22.vue";
+    import BeautyPage23 from "./pages/BeautyPage23.vue";
+    import BeautyPage24 from "./pages/BeautyPage24.vue";
+    import BeautyPage25 from "./pages/BeautyPage25.vue";
+    import BeautyPage26 from "./pages/BeautyPage26.vue";
+
+
 
     export default {
         name: "CSlider",
@@ -85,12 +78,12 @@
         components: {
             slider,
             slideritem,
-            BeautyPage12,
-            BeautyPage16,
-            BeautyPage17,
-            BeautyPage18,
-            BeautyPage19,
-            BeautyPage20,
+            BeautyPage21,
+            BeautyPage22,
+            BeautyPage23,
+            BeautyPage24,
+            BeautyPage25,
+            BeautyPage26,
         },
         mounted: {
             mount: function () {
@@ -139,28 +132,29 @@
 
             slide2Page: function (pageindex) {
                 if (pageindex == 0) {
-                    this.$refs.beautyPage16.runAni();
-                    this.$refs.beautyPage17.pauseAni();
+                    this.$refs.beautyPage21.runAni();
+                    this.$refs.beautyPage22.pauseAni();
                 } else if (pageindex == 1) {
-                    this.$refs.beautyPage16.pauseAni();
-                    this.$refs.beautyPage17.runAni();
-                    this.$refs.beautyPage12.pauseAni();
+                    this.$refs.beautyPage21.pauseAni();
+                    this.$refs.beautyPage23.runAni();
+                    this.$refs.beautyPage24.pauseAni();
                 } else if (pageindex == 2) {
-                    this.$refs.beautyPage17.pauseAni();
-                    this.$refs.beautyPage12.runAni();
-                    this.$refs.beautyPage18.pauseAni();
+                    this.$refs.beautyPage23.pauseAni();
+                    this.$refs.beautyPage24.runAni();
+                    this.$refs.beautyPage25.pauseAni();
                 } else if (pageindex == 3) {
-                    this.$refs.beautyPage12.pauseAni();
-                    this.$refs.beautyPage18.runAni();
-                    this.$refs.beautyPage19.pauseAni();
+                    this.$refs.beautyPage24.pauseAni();
+                    this.$refs.beautyPage25.runAni();
+                    this.$refs.beautyPage26.pauseAni();
                 } else if (pageindex == 4) {
-                    this.$refs.beautyPage18.pauseAni();
-                    this.$refs.beautyPage19.runAni();
-                    this.$refs.beautyPage20.pauseAni();
+                    this.$refs.beautyPage25.pauseAni();
+                    this.$refs.beautyPage26.runAni();
+                    this.$refs.beautyPage22.pauseAni();
                 } else if (pageindex == 5) {
-                    this.$refs.beautyPage19.pauseAni();
-                    this.$refs.beautyPage20.runAni();
-                }
+                    this.$refs.beautyPage26.pauseAni();
+                    this.$refs.beautyPage22.runAni();
+                    
+                } 
             }
         }
     };
