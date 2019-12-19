@@ -270,7 +270,6 @@ export default {
 #div0Id {
     z-index: 998;
     display: block;
-    opacity: 1;
 }
 #div1Id {
     position: absolute;

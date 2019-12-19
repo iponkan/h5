@@ -128,7 +128,7 @@
             slide2Page: function (pageindex) {
                 if (pageindex == 0) {
                     this.$refs.beautyPage21.runAni();
-                    this.$refs.beautyPage22.pauseAni();
+                    this.$refs.beautyPage23.pauseAni();
                 } else if (pageindex == 1) {
                     this.$refs.beautyPage21.pauseAni();
                     this.$refs.beautyPage23.runAni();

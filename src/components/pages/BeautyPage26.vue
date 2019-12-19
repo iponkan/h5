@@ -269,7 +269,6 @@
     #Commondiv0Id {
         z-index: 998;
         display: block;
-        opacity: 1;
     }
 
     #Commondiv1Id {

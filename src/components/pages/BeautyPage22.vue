@@ -18,8 +18,6 @@
                     </div>
                 </div>
 
-                
-
                 <div id="Commondiv5Id">
                     <div
                         class="animated"
@@ -245,7 +243,6 @@ export default {
 #Commondiv0Id {
     z-index: 998;
     display: block;
-    opacity: 1;
 }
 #Commondiv1Id {
     position: absolute;
@@ -483,15 +480,15 @@ export default {
     display: block;
 }
 
-    .div0Ani {
-        animation: 1000ms linear 2600ms 1 normal both running fadeInNormal;
-    }
+.div0Ani {
+    animation: 1000ms linear 2600ms 1 normal both running fadeInNormal;
+}
 
-    .div1Ani {
-        animation: 1000ms linear 3000ms 1 normal both running rotateIn;
-    }
+.div1Ani {
+    animation: 1000ms linear 3000ms 1 normal both running rotateIn;
+}
 
-    .div2Ani {
-        animation: 1500ms linear 3500ms 1 normal both running slideUp;
-    }
+.div2Ani {
+    animation: 1500ms linear 3500ms 1 normal both running slideUp;
+}
 </style>
