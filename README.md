@@ -1,4 +1,7 @@
-# h5
+# h5单页项目，使用vue构建
+
+- 分支guimanlong 桂满陇餐厅h5示例
+- 分支zhiaibaobao 智爱宝宝h5示例
 
 ## Project setup
 ```
