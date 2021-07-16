@@ -165,9 +165,9 @@
                 options: {
                     video: {
                         url:
-                            "https://uss.sonicers.com/video/xc.mp4",
+                            "https://vjs.zencdn.net/v/oceans.mp4",
                         pic:
-                            "https://uss.sonicers.com/video/xc.jpg"
+                            "https://vjs.zencdn.net/v/oceans.png"
                     },
                     autoplay: false
                 },
